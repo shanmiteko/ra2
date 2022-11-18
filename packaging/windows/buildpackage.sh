@@ -95,7 +95,7 @@ function build_platform()
 
 	for f in ${PACKAGING_COPY_MOD_BINARIES}; do
 		mkdir -p "${BUILTDIR}/$(dirname "${f}")"
-		cp "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/bin/${f}" "${BUILTDIR}/${f}"
+		cp "${TEMPLATE_ROOT}/mods/${MOD_ID}/${f}" "${BUILTDIR}/${f}"
 	done
 
 	set_engine_version "${ENGINE_VERSION}" "${BUILTDIR}"

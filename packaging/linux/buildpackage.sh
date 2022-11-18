@@ -2,10 +2,22 @@
 # OpenRA packaging script for Linux (AppImage)
 set -e
 
-command -v make >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK Linux packaging requires make."; exit 1; }
-command -v python3 >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK Linux packaging requires python 3."; exit 1; }
-command -v tar >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK Linux packaging requires tar."; exit 1; }
-command -v curl >/dev/null 2>&1 || command -v wget > /dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK Linux packaging requires curl or wget."; exit 1; }
+command -v make >/dev/null 2>&1 || {
+	echo >&2 "The OpenRA mod SDK Linux packaging requires make."
+	exit 1
+}
+command -v python3 >/dev/null 2>&1 || {
+	echo >&2 "The OpenRA mod SDK Linux packaging requires python 3."
+	exit 1
+}
+command -v tar >/dev/null 2>&1 || {
+	echo >&2 "The OpenRA mod SDK Linux packaging requires tar."
+	exit 1
+}
+command -v curl >/dev/null 2>&1 || command -v wget >/dev/null 2>&1 || {
+	echo >&2 "The OpenRA mod SDK Linux packaging requires curl or wget."
+	exit 1
+}
 
 require_variables() {
 	missing=""
@@ -54,14 +66,14 @@ cd "${PACKAGING_DIR}"
 
 if [ ! -f "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/Makefile" ]; then
 	echo "Required engine files not found."
-	echo "Run \`make\` in the mod directory to fetch and build the required files, then try again.";
+	echo "Run \`make\` in the mod directory to fetch and build the required files, then try again."
 	exit 1
 fi
 
 . "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/functions.sh"
 
 if [ ! -d "${OUTPUTDIR}" ]; then
-	echo "Output directory '${OUTPUTDIR}' does not exist.";
+	echo "Output directory '${OUTPUTDIR}' does not exist."
 	exit 1
 fi
 
@@ -75,15 +87,15 @@ for f in ${PACKAGING_COPY_ENGINE_FILES}; do
 done
 
 echo "Building mod files"
-pushd "${TEMPLATE_ROOT}" > /dev/null
+pushd "${TEMPLATE_ROOT}" >/dev/null
 make all
-popd > /dev/null
+popd >/dev/null
 
 cp -Lr "${TEMPLATE_ROOT}/mods/"* "${APPDIR}/usr/lib/openra/mods"
 
 for f in ${PACKAGING_COPY_MOD_BINARIES}; do
 	mkdir -p "${APPDIR}/usr/lib/openra/$(dirname "${f}")"
-	cp "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/bin/${f}" "${APPDIR}/usr/lib/openra/${f}"
+	cp "${TEMPLATE_ROOT}/mods/${MOD_ID}/${f}" "${APPDIR}/usr/lib/openra/${f}"
 done
 
 set_engine_version "${ENGINE_VERSION}" "${APPDIR}/usr/lib/openra"
@@ -91,7 +103,7 @@ if [ "${PACKAGING_OVERWRITE_MOD_VERSION}" == "True" ]; then
 	set_mod_version "${TAG}" "${APPDIR}/usr/lib/openra/mods/${MOD_ID}/mod.yaml"
 else
 	MOD_VERSION=$(grep 'Version:' "${APPDIR}/usr/lib/openra/mods/${MOD_ID}/mod.yaml" | awk '{print $2}')
-	echo "Mod version ${MOD_VERSION} will remain unchanged.";
+	echo "Mod version ${MOD_VERSION} will remain unchanged."
 fi
 
 # Add native libraries
@@ -117,12 +129,12 @@ chmod 0755 "${APPDIR}/usr/lib/"*.so
 rm -rf "${PACKAGING_APPIMAGE_DEPENDENCIES_SOURCE}"
 
 # Add launcher and icons
-sed "s/{MODID}/${MOD_ID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/AppRun.in" | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" > "${APPDIR}/AppRun"
+sed "s/{MODID}/${MOD_ID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/AppRun.in" | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" >"${APPDIR}/AppRun"
 chmod 0755 "${APPDIR}/AppRun"
 
 if [ -n "${PACKAGING_DISCORD_APPID}" ]; then
-	sed "s/{DISCORDAPPID}/${PACKAGING_DISCORD_APPID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra.desktop.discord.in" > temp.desktop.in
-	sed "s/{DISCORDAPPID}/${PACKAGING_DISCORD_APPID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra-mimeinfo.xml.discord.in" > temp.xml.in
+	sed "s/{DISCORDAPPID}/${PACKAGING_DISCORD_APPID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra.desktop.discord.in" >temp.desktop.in
+	sed "s/{DISCORDAPPID}/${PACKAGING_DISCORD_APPID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra-mimeinfo.xml.discord.in" >temp.xml.in
 else
 	cp "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra.desktop.in" temp.desktop.in
 	cp "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra-mimeinfo.xml.in" temp.xml.in
@@ -130,13 +142,13 @@ fi
 
 mkdir -p "${APPDIR}/usr/share/applications"
 chmod 0755 temp.desktop.in
-sed "s/{MODID}/${MOD_ID}/g" temp.desktop.in | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" | sed "s/{TAG}/${TAG}/g" > "${APPDIR}/usr/share/applications/openra-${MOD_ID}.desktop"
+sed "s/{MODID}/${MOD_ID}/g" temp.desktop.in | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" | sed "s/{TAG}/${TAG}/g" >"${APPDIR}/usr/share/applications/openra-${MOD_ID}.desktop"
 cp "${APPDIR}/usr/share/applications/openra-${MOD_ID}.desktop" "${APPDIR}/openra-${MOD_ID}.desktop"
 rm temp.desktop.in
 
 mkdir -p "${APPDIR}/usr/share/mime/packages"
 chmod 0644 temp.xml.in
-sed "s/{MODID}/${MOD_ID}/g" temp.xml.in | sed "s/{TAG}/${TAG}/g" > "${APPDIR}/usr/share/mime/packages/openra-${MOD_ID}.xml"
+sed "s/{MODID}/${MOD_ID}/g" temp.xml.in | sed "s/{TAG}/${TAG}/g" >"${APPDIR}/usr/share/mime/packages/openra-${MOD_ID}.xml"
 rm temp.xml.in
 
 if [ -f "${ARTWORK_DIR}/icon_scalable.svg" ]; then
@@ -152,13 +164,13 @@ done
 
 install -d "${APPDIR}/usr/bin"
 
-sed "s/{MODID}/${MOD_ID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra.appimage.in" | sed "s/{TAG}/${TAG}/g" | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" | sed "s/{MODINSTALLERNAME}/${PACKAGING_INSTALLER_NAME}/g" | sed "s|{MODFAQURL}|${PACKAGING_FAQ_URL}|g" > "${APPDIR}/usr/bin/openra-${MOD_ID}"
+sed "s/{MODID}/${MOD_ID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra.appimage.in" | sed "s/{TAG}/${TAG}/g" | sed "s/{MODNAME}/${PACKAGING_DISPLAY_NAME}/g" | sed "s/{MODINSTALLERNAME}/${PACKAGING_INSTALLER_NAME}/g" | sed "s|{MODFAQURL}|${PACKAGING_FAQ_URL}|g" >"${APPDIR}/usr/bin/openra-${MOD_ID}"
 chmod 0755 "${APPDIR}/usr/bin/openra-${MOD_ID}"
 
-sed "s/{MODID}/${MOD_ID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra-server.appimage.in" > "${APPDIR}/usr/bin/openra-${MOD_ID}-server"
+sed "s/{MODID}/${MOD_ID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra-server.appimage.in" >"${APPDIR}/usr/bin/openra-${MOD_ID}-server"
 chmod 0755 "${APPDIR}/usr/bin/openra-${MOD_ID}-server"
 
-sed "s/{MODID}/${MOD_ID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra-utility.appimage.in" > "${APPDIR}/usr/bin/openra-${MOD_ID}-utility"
+sed "s/{MODID}/${MOD_ID}/g" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/openra-utility.appimage.in" >"${APPDIR}/usr/bin/openra-${MOD_ID}-utility"
 chmod 0755 "${APPDIR}/usr/bin/openra-${MOD_ID}-utility"
 
 install -m 0755 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/linux/gtk-dialog.py" "${APPDIR}/usr/bin/gtk-dialog.py"
