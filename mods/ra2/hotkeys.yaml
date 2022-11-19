@@ -1,23 +1,23 @@
 ProductionTypeBuilding: E
-	Description: Building Tab
+	Description: 建筑页面
 	Types: Production
 
 ProductionTypeDefense: R
-	Description: Defense Tab
+	Description: 防御页面
 	Types: Production
 
 ProductionTypeInfantry: T
-	Description: Infantry Tab
+	Description: 步兵页面
 	Types: Production
 
 ProductionTypeVehicle: Y
-	Description: Vehicle Tab
+	Description: 载具页面
 	Types: Production
 
 ProductionTypeAircraft: U
-	Description: Aircraft Tab
+	Description: 飞行器页面
 	Types: Production
 
 ProductionTypeNaval: I
-	Description: Naval Tab 
+	Description: 海军页面
 	Types: Production

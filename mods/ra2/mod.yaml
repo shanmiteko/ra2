@@ -1,11 +1,11 @@
 Metadata:
-	Title: Red Alert 2
-	Description: The Soviet Union is back!\nThis time to conquer the United States...
+	Title: 红色警戒2
+	Description: 苏联已经回归！\n是时候战胜美国了...
 	Version: {DEV_VERSION}
 	Author: the RA2 mod team
 
 ModCredits:
-	ModTabTitle: Red Alert 2
+	ModTabTitle: 红色警戒2
 	ModCreditsFile: ra2|CREDITS # TODO rename to AUTHORS as stated in the .cs files when OpenRA#17460 is available
 
 PackageFormats: Mix, AudioBag
@@ -110,51 +110,51 @@ Assemblies:
 	ra2|OpenRA.Mods.RA2.dll
 
 ChromeLayout:
-	common|chrome/assetbrowser.yaml
+	ra2|chrome/assetbrowser.yaml
 	ra2|chrome/ingame-player.yaml
-	common|chrome/mainmenu.yaml
-	common|chrome/mainmenu-prompts.yaml
+	ra2|chrome/mainmenu.yaml
+	ra2|chrome/mainmenu-prompts.yaml
 	ra2|chrome/mainmenu-prerelease-notification.yaml
-	common|chrome/ingame-infoobjectives.yaml
-	common|chrome/ingame-infostats.yaml
-	common|chrome/musicplayer.yaml
-	common|chrome/tooltips.yaml
-	common|chrome/ingame.yaml
-	common|chrome/ingame-observer.yaml
-	common|chrome/ingame-chat.yaml
-	common|chrome/ingame-fmvplayer.yaml
-	common|chrome/ingame-menu.yaml
-	common|chrome/ingame-info.yaml
-	common|chrome/ingame-infoscripterror.yaml
-	common|chrome/ingame-infobriefing.yaml
+	ra2|chrome/ingame-infoobjectives.yaml
+	ra2|chrome/ingame-infostats.yaml
+	ra2|chrome/musicplayer.yaml
+	ra2|chrome/tooltips.yaml
+	ra2|chrome/ingame.yaml
+	ra2|chrome/ingame-observer.yaml
+	ra2|chrome/ingame-chat.yaml
+	ra2|chrome/ingame-fmvplayer.yaml
+	ra2|chrome/ingame-menu.yaml
+	ra2|chrome/ingame-info.yaml
+	ra2|chrome/ingame-infoscripterror.yaml
+	ra2|chrome/ingame-infobriefing.yaml
 	ra2|chrome/ingame-debug.yaml
-	common|chrome/ingame-perf.yaml
-	common|chrome/ingame-infochat.yaml
-	common|chrome/settings.yaml
-	common|chrome/credits.yaml
-	common|chrome/lobby.yaml
-	common|chrome/lobby-players.yaml
-	common|chrome/lobby-options.yaml
-	common|chrome/lobby-music.yaml
-	common|chrome/lobby-mappreview.yaml
-	common|chrome/lobby-servers.yaml
-	common|chrome/lobby-kickdialogs.yaml
-	common|chrome/multiplayer-browser.yaml
-	common|chrome/multiplayer-browserpanels.yaml
-	common|chrome/multiplayer-createserver.yaml
-	common|chrome/multiplayer-directconnect.yaml
-	common|chrome/map-chooser.yaml
-	common|chrome/connection.yaml
-	common|chrome/replaybrowser.yaml
-	common|chrome/missionbrowser.yaml
-	common|chrome/confirmation-dialogs.yaml
-	common|chrome/color-picker.yaml
-	common|chrome/dropdowns.yaml
-	common|chrome/editor.yaml
-	common|chrome/playerprofile.yaml
-	common|chrome/gamesave-browser.yaml
-	common|chrome/gamesave-loading.yaml
-	common|chrome/ingame-debuginfo.yaml
+	ra2|chrome/ingame-perf.yaml
+	ra2|chrome/ingame-infochat.yaml
+	ra2|chrome/settings.yaml
+	ra2|chrome/credits.yaml
+	ra2|chrome/lobby.yaml
+	ra2|chrome/lobby-players.yaml
+	ra2|chrome/lobby-options.yaml
+	ra2|chrome/lobby-music.yaml
+	ra2|chrome/lobby-mappreview.yaml
+	ra2|chrome/lobby-servers.yaml
+	ra2|chrome/lobby-kickdialogs.yaml
+	ra2|chrome/multiplayer-browser.yaml
+	ra2|chrome/multiplayer-browserpanels.yaml
+	ra2|chrome/multiplayer-createserver.yaml
+	ra2|chrome/multiplayer-directconnect.yaml
+	ra2|chrome/map-chooser.yaml
+	ra2|chrome/connection.yaml
+	ra2|chrome/replaybrowser.yaml
+	ra2|chrome/missionbrowser.yaml
+	ra2|chrome/confirmation-dialogs.yaml
+	ra2|chrome/color-picker.yaml
+	ra2|chrome/dropdowns.yaml
+	ra2|chrome/editor.yaml
+	ra2|chrome/playerprofile.yaml
+	ra2|chrome/gamesave-browser.yaml
+	ra2|chrome/gamesave-loading.yaml
+	ra2|chrome/ingame-debuginfo.yaml
 
 Weapons:
 	ra2|weapons/bullets.yaml
@@ -193,16 +193,16 @@ Translations:
 	ra2|languages/english.yaml
 
 Hotkeys:
-	common|hotkeys/game.yaml
-	common|hotkeys/observer.yaml
-	common|hotkeys/production-common.yaml
-	common|hotkeys/supportpowers.yaml
-	common|hotkeys/viewport.yaml
+	ra2|hotkeys/game.yaml
+	ra2|hotkeys/observer.yaml
+	ra2|hotkeys/production-common.yaml
+	ra2|hotkeys/supportpowers.yaml
+	ra2|hotkeys/viewport.yaml
 	ra2|hotkeys.yaml
 
 LoadScreen: LogoStripeLoadScreen
 	Image: ra2|uibits/loadscreen.png
-	Text: Carving wooden nickels..., Preparing paratroopers..., Welcoming you to Texas..., Optimizing helium mix..., Receiving thoughts..., Igniting boosters...
+	Text: 加载中...
 
 ServerTraits:
 	LobbyCommands
@@ -215,35 +215,35 @@ ChromeMetrics:
 
 Fonts:
 	Regular:
-		Font: common|FreeSans.ttf
+		Font: ra2|sarasa-fixed-sc-regular.ttf
 		Size: 14
 		Ascender: 11
 	Bold:
-		Font: common|FreeSansBold.ttf
+		Font: ra2|sarasa-fixed-sc-bold.ttf
 		Size: 14
 		Ascender: 11
 	Title:
-		Font: common|FreeSansBold.ttf
+		Font: ra2|sarasa-fixed-sc-bold.ttf
 		Size: 32
 		Ascender: 24
 	BigBold:
-		Font: common|FreeSansBold.ttf
+		Font: ra2|sarasa-fixed-sc-bold.ttf
 		Size: 24
 		Ascender: 18
 	MediumBold:
-		Font: common|FreeSansBold.ttf
+		Font: ra2|sarasa-fixed-sc-bold.ttf
 		Size: 18
 		Ascender: 14
 	Small:
-		Font: common|FreeSans.ttf
+		Font: ra2|sarasa-fixed-sc-regular.ttf
 		Size: 12
 		Ascender: 9
 	Tiny:
-		Font: common|FreeSans.ttf
+		Font: ra2|sarasa-fixed-sc-regular.ttf
 		Size: 10
 		Ascender: 8
 	TinyBold:
-		Font: common|FreeSansBold.ttf
+		Font: ra2|sarasa-fixed-sc-bold.ttf
 		Size: 10
 		Ascender: 8
 
@@ -273,27 +273,27 @@ AssetBrowser:
 
 GameSpeeds:
 	slowest:
-		Name: Slowest
+		Name: 很慢
 		Timestep: 80
 		OrderLatency: 2
 	slower:
-		Name: Slower
+		Name: 慢
 		Timestep: 50
 		OrderLatency: 3
 	default:
-		Name: Normal
+		Name: 正常
 		Timestep: 40
 		OrderLatency: 3
 	fast:
-		Name: Fast
+		Name: 快
 		Timestep: 35
 		OrderLatency: 4
 	faster:
-		Name: Faster
+		Name: 很快
 		Timestep: 30
 		OrderLatency: 4
 	fastest:
-		Name: Fastest
+		Name: 非常快
 		Timestep: 20
 		OrderLatency: 6
 

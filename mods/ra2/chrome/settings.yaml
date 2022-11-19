@@ -1,0 +1,883 @@
+Background@SETTINGS_PANEL:
+	Logic: SettingsLogic
+		HotkeyGroups:
+			游戏指令:
+				Template: TWO_COLUMN
+				Types: OrderGenerator, World, Menu
+			视角指令:
+				Template: TWO_COLUMN
+				Types: Viewport
+			观战 / 回放指令:
+				Template: TWO_COLUMN
+				Types: Observer, Replay
+			单位指令:
+				Template: THREE_COLUMN
+				Types: Unit
+			单位姿态指令:
+				Template: TWO_COLUMN
+				Types: Stance
+			生产指令:
+				Template: THREE_COLUMN
+				Types: Production, ProductionSlot
+			支援能力指令:
+				Template: THREE_COLUMN
+				Types: SupportPower
+			音乐指令:
+				Template: TWO_COLUMN
+				Types: Music
+	X: (WINDOW_RIGHT - WIDTH) / 2
+	Y: (WINDOW_BOTTOM -  HEIGHT) / 2
+	Width: 600
+	Height: 400
+	Children:
+		Label@SETTINGS_LABEL_TITLE:
+			Y: 20
+			Width: PARENT_RIGHT
+			Height: 25
+			Text: 设置
+			Align: Center
+			Font: Bold
+		Button@RESET_BUTTON:
+			X: 20
+			Y: PARENT_BOTTOM - 45
+			Width: 160
+			Height: 25
+			Text: 重置
+			Font: Bold
+		Button@BACK_BUTTON:
+			Key: escape
+			X: PARENT_RIGHT - 180
+			Y: PARENT_BOTTOM - 45 
+			Width: 160
+			Height: 25
+			Text: 返回
+			Font: Bold
+		Container@TAB_CONTAINER:
+			Y: 50
+			Width: PARENT_RIGHT
+			Height: 25
+			Children:
+				Button@DISPLAY_TAB:
+					X: 70
+					Width: 90
+					Height: 25
+					Text: 显示
+					Font: Bold
+				Button@AUDIO_TAB:
+					X: 70 + WIDTH
+					Width: 90
+					Height: 25
+					Text: 音效
+					Font: Bold
+				Button@INPUT_TAB:
+					X: 70 + 2 * WIDTH
+					Width: 90
+					Height: 25
+					Text: 输入
+					Font: Bold
+				Button@HOTKEYS_TAB:
+					X: 70 + 3 * WIDTH
+					Width: 90
+					Height: 25
+					Text: 快捷键
+					Font: Bold
+				Button@ADVANCED_TAB:
+					X: 70 + 4 * WIDTH
+					Width: 90
+					Height: 25
+					Text: 高级
+					Font: Bold
+		Container@DISPLAY_PANEL:
+			X: 5
+			Y: 50
+			Width: PARENT_RIGHT - 10
+			Height: PARENT_BOTTOM - 50
+			Children:
+				Label@PLAYER:
+					Text: 玩家：
+					X: 15
+					Y: 40
+					Width: 120
+					Height: 25
+					Align: Right
+				TextField@PLAYERNAME:
+					Text: 名字
+					X: 140
+					Y: 40
+					Width: 160
+					Height: 25
+					MaxLength: 16
+				Label@COLOR:
+					X: 265
+					Y: 40
+					Width: 145
+					Height: 25
+					Text: 偏好颜色：
+					Align: Right
+				ColorPreviewManager@COLOR_MANAGER:
+				DropDownButton@PLAYERCOLOR:
+					X: 415
+					Y: 40
+					Width: 75
+					Height: 25
+					IgnoreChildMouseOver: true
+					PanelAlign: Right
+					Children:
+						ColorBlock@COLORBLOCK:
+							X: 5
+							Y: 6
+							Width: PARENT_RIGHT - 35
+							Height: PARENT_BOTTOM - 12
+				Label@BATTLEFIELD_CAMERA:
+					X: 15
+					Y: 70
+					Width: 120
+					Height: 25
+					Text: 视距：
+					Align: Right
+				DropDownButton@BATTLEFIELD_CAMERA_DROPDOWN:
+					X: 140
+					Y: 70
+					Width: 160
+					Height: 25
+					Font: Regular
+				Label@TARGET_LINES:
+					X: 265
+					Y: 70
+					Width: 145
+					Height: 25
+					Text: 显示目标线：
+					Align: Right
+				DropDownButton@TARGET_LINES_DROPDOWN:
+					X: 415
+					Y: 70
+					Width: 160
+					Height: 25
+					Font: Regular
+				Label@UI_SCALE:
+					X: 15
+					Y: 100
+					Width: 120
+					Height: 25
+					Text: UI缩放倍率：
+					Align: Right
+				DropDownButton@UI_SCALE_DROPDOWN:
+					X: 140
+					Y: 100
+					Width: 160
+					Height: 25
+					Font: Regular
+				Label@STATUS_BARS:
+					X: 265
+					Y: 100
+					Width: 145
+					Height: 25
+					Text: 生命条显示：
+					Align: Right
+				DropDownButton@STATUS_BAR_DROPDOWN:
+					X: 415
+					Y: 100
+					Width: 160
+					Height: 25
+					Font: Regular
+				Checkbox@CURSORDOUBLE_CHECKBOX:
+					X: 105
+					Y: 133
+					Width: 200
+					Height: 20
+					Font: Regular
+					Text: 更大的指针
+				Checkbox@PLAYER_STANCE_COLORS_CHECKBOX:
+					X: 195
+					Y: 133
+					Width: 200
+					Height: 20
+					Font: Regular
+					Text: 敌友颜色模式
+				Checkbox@PAUSE_SHELLMAP_CHECKBOX:
+					X: 375
+					Y: 133
+					Width: 200
+					Height: 20
+					Font: Regular
+					Text: 暂停菜单背景
+				Label@VIDEO_TITLE:
+					Y: 190
+					Width: PARENT_RIGHT
+					Font: Bold
+					Text: 显示
+					Align: Center
+				Label@VIDEO_MODE:
+					X: 15
+					Y: 210
+					Width: 120
+					Height: 25
+					Align: Right
+					Text: 模式：
+				DropDownButton@MODE_DROPDOWN:
+					X: 140
+					Y: 210
+					Width: 160
+					Height: 25
+					Font: Regular
+					Text: 窗口化
+				Checkbox@VSYNC_CHECKBOX:
+					X: 310
+					Y: 213
+					Width: 200
+					Height: 20
+					Font: Regular
+					Text: 启用 VSync
+				Container@WINDOW_RESOLUTION:
+					Y: 240
+					Children:
+						Label@WINDOW_SIZE:
+							X: 15
+							Height: 25
+							Width: 120
+							Align: Right
+							Text: 分辨率：
+						TextField@WINDOW_WIDTH:
+							X: 140
+							Width: 55
+							Height: 25
+							MaxLength: 5
+							Type: Integer
+						Label@X:
+							Text: x
+							Font: Bold
+							X: 195
+							Height: 25
+							Width: 15
+							Align: Center
+						TextField@WINDOW_HEIGHT:
+							X: 210
+							Width: 55
+							Height: 25
+							MaxLength: 5
+							Type: Integer
+				Container@DISPLAY_SELECTION:
+					Y: 240
+					Children:
+						Label@DISPLAY_SELECTION_LABEL:
+							X: 15
+							Height: 25
+							Width: 120
+							Align: Right
+							Text: 显示器：
+						DropDownButton@DISPLAY_SELECTION_DROPDOWN:
+							X: 140
+							Width: 160
+							Height: 25
+							Font: Regular
+							Text: 标准
+				Checkbox@FRAME_LIMIT_CHECKBOX:
+					X: 310
+					Y: 243
+					Width: 200
+					Height: 20
+					Font: Regular
+					Text: 限制帧率
+				Slider@FRAME_LIMIT_SLIDER:
+					X: 340
+					Y: 265
+					Width: 200
+					Height: 20
+					Ticks: 20
+					MinimumValue: 50
+					MaximumValue: 240
+				Label@GL_PROFILE:
+					X: 15
+					Y: 270
+					Width: 120
+					Height: 25
+					Align: Right
+					Text: OpenGL配置：
+				DropDownButton@GL_PROFILE_DROPDOWN:
+					X: 140
+					Y: 270
+					Width: 160
+					Height: 25
+					Font: Regular
+				Label@RESTART_REQUIRED_DESC:
+					Y: PARENT_BOTTOM - 40
+					Width: PARENT_RIGHT
+					Height: 15
+					Font: Tiny
+					Text: 显示模式与OpenGL的改动将在游戏重启后生效
+					Align: Center
+		Container@AUDIO_PANEL:
+			X: 5
+			Y: 50
+			Width: PARENT_RIGHT - 10
+			Height: PARENT_BOTTOM
+			Children:
+				Label@NO_AUDIO_DEVICE:
+					Y: 50
+					Width: PARENT_RIGHT
+					Align: Center
+					Text: 未检测到音频设备
+				Container@AUDIO_CONTROLS:
+					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
+					Children:
+						Checkbox@CASH_TICKS:
+							X: 95
+							Y: 150
+							Width: 200
+							Height: 20
+							Font: Regular
+							Text: 启用资金变动音效
+						Checkbox@MUTE_SOUND:
+							X: 95
+							Y: 90
+							Width: 200
+							Height: 20
+							Font: Regular
+							Text: 静音
+						Checkbox@MUTE_BACKGROUND_MUSIC:
+							X: 95
+							Y: 120
+							Width: 200
+							Height: 20
+							Font: Regular
+							Text: 禁用背景音乐
+						Label@SOUND_LABEL:
+							X: PARENT_RIGHT - WIDTH - 210
+							Y: 89
+							Width: 95
+							Height: 25
+							Align: Right
+							Text: 音效音量：
+						ExponentialSlider@SOUND_VOLUME:
+							X: PARENT_RIGHT - WIDTH - 45
+							Y: 93
+							Width: 170
+							Height: 20
+							Ticks: 7
+						Label@MUSIC_LABEL:
+							X: PARENT_RIGHT - WIDTH - 210
+							Y: 119
+							Width: 95
+							Height: 25
+							Align: Right
+							Text: 音乐音量：
+						ExponentialSlider@MUSIC_VOLUME:
+							X: PARENT_RIGHT - WIDTH - 45
+							Y: 123
+							Width: 170
+							Height: 20
+							Ticks: 7
+						Label@VIDEO_LABEL:
+							X: PARENT_RIGHT - WIDTH - 210
+							Y: 149
+							Width: 95
+							Height: 25
+							Align: Right
+							Text: 视频音量：
+						ExponentialSlider@VIDEO_VOLUME:
+							X: PARENT_RIGHT - WIDTH - 45
+							Y: 153
+							Width: 170
+							Height: 20
+							Ticks: 7
+				Label@AUDIO_DEVICE_LABEL:
+					X: 190 - WIDTH - 5
+					Y: 240
+					Width: 75
+					Height: 25
+					Align: Right
+					Text: 音频设备：
+				DropDownButton@AUDIO_DEVICE:
+					X: 190
+					Y: 240
+					Width: 300
+					Height: 25
+				Label@AUDIO_DEVICE_DESC:
+					Y: 261
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Tiny
+					Align: Center
+					Text: 音频设备的改动将在游戏重启后生效
+		Container@INPUT_PANEL:
+			X: 5
+			Y: 50
+			Width: PARENT_RIGHT - 10
+			Height: PARENT_BOTTOM
+			Children:
+				Label@MOUSE_CONTROL_LABEL:
+					X: 15
+					Y: 40
+					Width: 110
+					Height: 25
+					Font: Regular
+					Text: 控制模式：
+					Align: Right
+				DropDownButton@MOUSE_CONTROL_DROPDOWN:
+					X: 130
+					Y: 40
+					Width: 150
+					Height: 25
+					Font: Regular
+				Container@MOUSE_CONTROL_DESC_CLASSIC:
+					X: 55
+					Y: 70
+					Width: 300
+					Children:
+						LabelWithHighlight@DESC_SELECTION:
+							Height: 16
+							Font: Small
+							Text: - 使用{鼠标左键}选取单位
+						LabelWithHighlight@DESC_COMMANDS:
+							Y: 17
+							Height: 16
+							Font: Small
+							Text: - 使用{鼠标左键}下达指令
+						LabelWithHighlight@DESC_BUILDIGS:
+							Y: 34
+							Height: 16
+							Font: Small
+							Text: - 使用{鼠标左键}放置建筑
+						LabelWithHighlight@DESC_SUPPORT:
+							Y: 51
+							Height: 16
+							Font: Small
+							Text: - 使用{鼠标左键}施放支援技能
+						LabelWithHighlight@DESC_ZOOM:
+							Y: 68
+							Height: 16
+							Font: Small
+							Text: - 使用{鼠标滚轮}缩放视距
+						LabelWithHighlight@DESC_ZOOM_MODIFIER:
+							Y: 68
+							Height: 16
+							Font: Small
+							Text: - 使用{MODIFIER + 鼠标滚轮}缩放视距
+						LabelWithHighlight@DESC_SCROLL_RIGHT:
+							Y: 85
+							Height: 16
+							Font: Small
+							Text: - 按住{鼠标右键}滚屏
+						LabelWithHighlight@DESC_SCROLL_MIDDLE:
+							Y: 85
+							Height: 16
+							Font: Small
+							Text: - 按住{鼠标中键}滚屏
+						Label@DESC_EDGESCROLL:
+							X: 9
+							Y: 102
+							Height: 16
+							Font: Small
+							Text: 或将鼠标移动到地图边缘滚动屏幕
+				Container@MOUSE_CONTROL_DESC_MODERN:
+					X: 55
+					Y: 70
+					Width: 300
+					Children:
+						LabelWithHighlight@DESC_SELECTION:
+							Height: 16
+							Font: Small
+							Text: - 使用{鼠标左键}选取单位
+						LabelWithHighlight@DESC_COMMANDS:
+							Y: 17
+							Height: 16
+							Font: Small
+							Text: - 使用{鼠标右键}下达指令
+						LabelWithHighlight@DESC_BUILDIGS:
+							Y: 34
+							Height: 16
+							Font: Small
+							Text: - 使用{鼠标左键}放置建筑
+						LabelWithHighlight@DESC_SUPPORT:
+							Y: 51
+							Height: 16
+							Font: Small
+							Text: - 使用{鼠标左键}施放支援技能
+						LabelWithHighlight@DESC_ZOOM:
+							Y: 68
+							Height: 16
+							Font: Small
+							Text: - 使用{鼠标滚轮}缩放视距
+						LabelWithHighlight@DESC_ZOOM_MODIFIER:
+							Y: 68
+							Height: 16
+							Font: Small
+							Text: - 使用{MODIFIER + 鼠标滚轮}缩放视距
+						LabelWithHighlight@DESC_SCROLL_RIGHT:
+							Y: 85
+							Height: 16
+							Font: Small
+							Text: - 按住{鼠标右键}滚屏
+						LabelWithHighlight@DESC_SCROLL_MIDDLE:
+							Y: 85
+							Height: 16
+							Font: Small
+							Text: - 按住{鼠标中键}滚屏
+						Label@DESC_EDGESCROLL:
+							X: 9
+							Y: 102
+							Height: 16
+							Font: Small
+							Text: 或将鼠标移动到地图边缘滚动屏幕
+				Label@MOUSE_SCROLL_TYPE_LABEL:
+					X: 15
+					Y: 210
+					Width: 110
+					Height: 25
+					Font: Regular
+					Text: 滚屏类型：
+					Align: Right
+				DropDownButton@MOUSE_SCROLL_TYPE_DROPDOWN:
+					X: 130
+					Y: 210
+					Width: 150
+					Height: 25
+					Font: Regular
+				Checkbox@LOCKMOUSE_CHECKBOX:
+					X: 15
+					Y: 243
+					Width: 190
+					Height: 20
+					Font: Regular
+					Text: 将鼠标锁定在窗口内
+				Label@ZOOM_MODIFIER_LABEL:
+					X: 350
+					Y: 70
+					Width: 70
+					Height: 25
+					Font: Regular
+					Text: 滚轮缩放控制键：
+					Align: Right
+				DropDownButton@ZOOM_MODIFIER:
+					X: 425
+					Y: 70
+					Width: 150
+					Height: 25
+					Font: Regular
+				Checkbox@EDGESCROLL_CHECKBOX:
+					X: 360
+					Y: 103
+					Width: 180
+					Height: 20
+					Font: Regular
+					Text: 地图边缘滚屏
+				Checkbox@ALTERNATE_SCROLL_CHECKBOX:
+					X: 360
+					Y: 133
+					Width: 180
+					Height: 20
+					Font: Regular
+					Text: 切换滚屏按键
+				Label@SCROLL_SPEED_LABEL:
+					X: 305
+					Y: 210
+					Width: 100
+					Height: 25
+					Text: 滚屏速度：
+					Align: Right
+				Slider@SCROLLSPEED_SLIDER:
+					X: 410
+					Y: 215
+					Width: 165
+					Height: 20
+					Ticks: 5
+					MinimumValue: 10
+					MaximumValue: 50
+				Label@ZOOM_SPEED_LABEL:
+					X: 305
+					Y: 240
+					Width: 100
+					Height: 25
+					Text: 缩放速度：
+					Align: Right
+				ExponentialSlider@ZOOMSPEED_SLIDER:
+					X: 410
+					Y: 245
+					Width: 165
+					Height: 20
+					Ticks: 5
+					MinimumValue: 0.01
+					MaximumValue: 0.4
+				Label@UI_SCROLL_SPEED_LABEL:
+					X: 305
+					Y: 270
+					Width: 100
+					Height: 25
+					Text: 面板滚动速度：
+					Align: Right
+				Slider@UI_SCROLLSPEED_SLIDER:
+					X: 410
+					Y: 275
+					Width: 165
+					Height: 20
+					Ticks: 5
+					MinimumValue: 1
+					MaximumValue: 100
+		Container@HOTKEYS_PANEL:
+			X: 5
+			Y: 50
+			Width: PARENT_RIGHT - 10
+			Height: PARENT_BOTTOM
+			Children:
+				ScrollPanel@HOTKEY_LIST:
+					X: 15
+					Y: 40
+					Width: PARENT_RIGHT - 30
+					TopBottomSpacing: 4
+					ItemSpacing: 4
+					Height: 190
+					Children:
+						ScrollItem@HEADER:
+							BaseName: scrollheader
+							Width: 528
+							Height: 20
+							Visible: false
+							Children:
+								Label@LABEL:
+									Y: 5
+									Font: TinyBold
+									Width: PARENT_RIGHT
+									Height: 10
+									Align: Center
+								ScrollItem@HEADER:
+									Width: 528
+									Height: 13
+									Visible: false
+									Children:
+										Label@LABEL:
+											Font: TinyBold
+											Width: PARENT_RIGHT
+											Height: 10
+											Align: Center
+								Container@TEMPLATES:
+									Children:
+										Container@TWO_COLUMN:
+											Width: 262
+											Height: 25
+											Visible: false
+											Children:
+												Label@FUNCTION:
+													Y: 0 - 1
+													Width: PARENT_RIGHT - 85
+													Height: 25
+													Align: Right
+												Button@HOTKEY:
+													X: PARENT_RIGHT - WIDTH
+													Width: 80
+													Height: 25
+													Align: Left
+													TooltipContainer: SETTINGS_TOOLTIP_CONTAINER
+										Container@THREE_COLUMN:
+											Width: 173
+											Height: 25
+											Visible: false
+											Children:
+												Label@FUNCTION:
+													Y: 0 - 1
+													Width: PARENT_RIGHT - 84
+													Height: 25
+													Align: Right
+												Button@HOTKEY:
+													X: PARENT_RIGHT - WIDTH + 1
+													Width: 80
+													Height: 25
+													Align: Left
+													TooltipContainer: SETTINGS_TOOLTIP_CONTAINER
+				Background@HOTKEY_DIALOG_ROOT:
+					X: 15
+					Y: 230
+					Width: PARENT_RIGHT - 30
+					Height: 65
+					Background: dialog3
+					Children:
+						Label@HOTKEY_LABEL:
+							X: 15
+							Y: 19
+							Width: 219 - 15 - 10
+							Height: 25
+							Font: Bold
+							Align: Right
+						HotkeyEntry@HOTKEY_ENTRY:
+							X: 219
+							Y: 20
+							Width: 170
+							Height: 25
+						Container@NOTICES:
+							X: 219
+							Y: 42
+							Width: 170
+							Height: 25
+							Children:
+								Label@DEFAULT_NOTICE:
+									Width: PARENT_RIGHT
+									Height: PARENT_BOTTOM
+									Font: Tiny
+									Align: Left
+									Text: 这是默认快捷键
+								Label@ORIGINAL_NOTICE:
+									Width: PARENT_RIGHT
+									Height: PARENT_BOTTOM
+									Font: Tiny
+									Align: Left
+									Text: 默认快捷键是 "{0}"
+								Label@DUPLICATE_NOTICE:
+									Width: PARENT_RIGHT
+									Height: PARENT_BOTTOM
+									Font: Tiny
+									Align: Left
+									Text: 该按键已被设置于 "{0}"
+						Button@OVERRIDE_HOTKEY_BUTTON:
+							X: PARENT_RIGHT - 3 * WIDTH - 30
+							Y: 20
+							Width: 70
+							Height: 25
+							Text: 撤销
+							Font: Bold
+						Button@CLEAR_HOTKEY_BUTTON:
+							X: PARENT_RIGHT - 2 * WIDTH - 30
+							Y: 20
+							Width: 65
+							Height: 25
+							Text: 清除
+							Font: Bold
+							TooltipText: 不设置快捷键
+							TooltipContainer: SETTINGS_TOOLTIP_CONTAINER
+							TooltipTemplate: SIMPLE_TOOLTIP
+						Button@RESET_HOTKEY_BUTTON:
+							X: PARENT_RIGHT - WIDTH - 20
+							Y: 20
+							Width: 65
+							Height: 25
+							Text: 重置
+							Font: Bold
+							TooltipText: 还原为默认快捷键
+							TooltipContainer: SETTINGS_TOOLTIP_CONTAINER
+							TooltipTemplate: SIMPLE_TOOLTIP
+		Container@ADVANCED_PANEL:
+			X: 5
+			Y: 50
+			Width: PARENT_RIGHT - 10
+			Height: PARENT_BOTTOM
+			Children:
+				Checkbox@NAT_DISCOVERY:
+					X: 15 + 45
+					Y: 40
+					Width: 200
+					Height: 20
+					Font: Regular
+					Text: 启用网络发现 (UPnP)
+				Checkbox@PERFTEXT_CHECKBOX:
+					X: 15 + 45
+					Y: 40 + 30
+					Width: 300
+					Height: 20
+					Font: Regular
+					Text: 显示性能文本
+				Checkbox@PERFGRAPH_CHECKBOX:
+					X: 15 + 45
+					Y: 40 + 30 * 2
+					Width: 300
+					Height: 20
+					Font: Regular
+					Text: 显示性能图表
+				Checkbox@FETCH_NEWS_CHECKBOX:
+					X: 310
+					Y: 40
+					Width: 300
+					Height: 20
+					Font: Regular
+					Text: 获取社区新闻
+				Checkbox@CHECK_VERSION_CHECKBOX:
+					X: 310
+					Y: 40 + 30
+					Width: 300
+					Height: 20
+					Font: Regular
+					Text: 检查更新
+				Checkbox@SENDSYSINFO_CHECKBOX:
+					X: 310
+					Y: 40 + 30 * 2
+					Width: 300
+					Height: 20
+					Font: Regular
+					Text: 发送系统信息
+				Label@SENDSYSINFO_DESC:
+					X: 310
+					Y: 40 + 30 * 2 + 15
+					Width: 250
+					Height: 30
+					Font: Tiny
+					WordWrap: True
+					Text: 您的部分系统信息将匿名反馈给OpenRA开
+				Label@SENDSYSINFO_DESC2:
+					X: 310
+					Y: 40 + 30 * 2 + 15 * 2
+					Width: 250
+					Height: 30
+					Font: Tiny
+					WordWrap: True
+					Text: 发组，促进研发与优化。
+				Label@DEBUG_TITLE:
+					Y: 180
+					Width: PARENT_RIGHT
+					Font: Bold
+					Text: 开发者
+					Align: Center
+				Container@DEBUG_HIDDEN_LABEL:
+					Y: 230
+					Width: PARENT_RIGHT
+					Children:
+						Label@A:
+							Width: PARENT_RIGHT
+							Height: 20
+							Font: Regular
+							Text: 可通过以下方式启用其他特定于开发人员的选项
+							Align: Center
+						Label@B:
+							Y: 20
+							Width: PARENT_RIGHT
+							Height: 20
+							Font: Regular
+							Text: Debug.DisplayDeveloperSettings设置或启动项
+							Align: Center
+				Container@DEBUG_OPTIONS:
+					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
+					Children:
+						Checkbox@BOTDEBUG_CHECKBOX:
+							X: 15 + 45
+							Y: 200
+							Width: 300
+							Height: 20
+							Font: Regular
+							Text: 显示AI调试消息
+						Checkbox@CHECKUNSYNCED_CHECKBOX:
+							X: 15 + 45
+							Y: 200 + 30
+							Width: 300
+							Height: 20
+							Font: Regular
+							Text: 检查未同步代码周围的同步
+						Checkbox@CHECKBOTSYNC_CHECKBOX:
+							X: 15 + 45
+							Y: 200 + 30 * 2
+							Width: 300
+							Height: 20
+							Font: Regular
+							Text: 检查BotModule代码周围的同步
+						Checkbox@LUADEBUG_CHECKBOX:
+							X: 310
+							Y: 200
+							Width: 300
+							Height: 20
+							Font: Regular
+							Text: 显示地图调试消息
+						Checkbox@REPLAY_COMMANDS_CHECKBOX:
+							X: 310
+							Y: 200 + 30
+							Width: 300
+							Height: 20
+							Font: Regular
+							Text: 在回放中启用调试命令
+		TooltipContainer@SETTINGS_TOOLTIP_CONTAINER:

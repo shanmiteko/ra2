@@ -5,7 +5,7 @@ engineer:
 		Queue: Infantry
 		Prerequisites: ~barracks
 		BuildPaletteOrder: 30
-		Description: Captures enemy structures.\n  Unarmed
+		Description: 占领中立或敌方建筑\n·无武装
 	Valued:
 		Cost: 500
 	UpdatesPlayerStatistics:
@@ -15,7 +15,7 @@ engineer:
 		PlayerExperience: 25
 		Voice: Move
 	Tooltip:
-		Name: Engineer
+		Name: 工程师
 	Selectable:
 		Bounds: 20, 30, 0, -11
 	Health:
@@ -47,7 +47,7 @@ dog:
 		Queue: Infantry
 		Prerequisites: ~barracks
 		BuildPaletteOrder: 40
-		Description: Anti-infantry unit.\nCan detect cloaked units and spies.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: 反步兵军犬\n\n·强势对抗：步兵\n·弱势对抗：载具、飞行器
 	Valued:
 		Cost: 200
 	UpdatesPlayerStatistics:
@@ -57,7 +57,7 @@ dog:
 		PlayerExperience: 10
 		Voice: Move
 	Tooltip:
-		Name: Attack Dog
+		Name: 狗
 	Selectable:
 		Bounds: 30, 24, 0, -5
 	Health:
@@ -130,7 +130,7 @@ e1:
 		Queue: Infantry
 		Prerequisites: ~gapile
 		BuildPaletteOrder: 10
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: 泛用型步兵\n·强势对抗：步兵\n·弱势对抗：载具、飞行器
 	Valued:
 		Cost: 200
 	UpdatesPlayerStatistics:
@@ -140,7 +140,7 @@ e1:
 		PlayerExperience: 10
 		Voice: Move
 	Tooltip:
-		Name: G.I.
+		Name: 美国大兵
 	Selectable:
 		Bounds: 20, 30, 0, -11
 	Health:
@@ -231,12 +231,12 @@ snipe:
 		PlayerExperience: 30
 		Voice: Move
 	Tooltip:
-		Name: Sniper
+		Name: 狙击手
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 80
 		Prerequisites: radar, ~infantry.england
-		Description: Special anti-infantry unit.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: 英国的长程反步兵特种部队\n\n·强势对抗：步兵\n·弱势对抗：载具、飞行器
 	Selectable:
 		Bounds: 20, 30, 0, -11
 	Health:
@@ -269,7 +269,7 @@ spy:
 		BuildAtProductionType: Infantry
 		BuildPaletteOrder: 130
 		Prerequisites: gatech, ~gapile
-		Description: Infiltrates enemy structures for intel or\nsabotage. Exact effect depends on the\nbuilding infiltrated.\n  Unarmed\nSpecial Ability: Disguises
+		Description: 渗透敌方建筑以获取资讯或策动破坏\n\n·具体效果取决于所渗透的建筑种类\n\n·无武装\n\n·特殊能力：伪装
 	Valued:
 		Cost: 1000
 	UpdatesPlayerStatistics:
@@ -279,8 +279,8 @@ spy:
 		PlayerExperience: 25
 		Voice: Move
 	DisguiseTooltip:
-		Name: Spy
-		GenericName: Soldier
+		Name: 间谍
+		GenericName: 间谍
 	Selectable:
 		Bounds: 24, 28, -1, -8
 	Health:
@@ -324,7 +324,7 @@ ghost:
 		BuildAtProductionType: Infantry
 		BuildPaletteOrder: 100
 		Prerequisites: ~disabled
-		Description: Elite commando infantry, armed with\na sub machine gun and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\nSpecial Ability: Destroy Building with C4
+		Description: 装备冲锋枪和C4炸弹的美国三栖特种部队\n\n·无法一击杀死步兵\n·C4炸弹无法一击摧毁建筑\n\n·强势对抗：步兵、建筑\n·弱势对抗：飞行器\n\n·特殊能力：两栖\n·特殊能力：爆破建筑\n·特殊能力：爆破舰艇
 	Valued:
 		Cost: 1000
 	UpdatesPlayerStatistics:
@@ -334,7 +334,7 @@ ghost:
 		PlayerExperience: 50
 		Voice: Move
 	Tooltip:
-		Name: Navy SEAL
+		Name: 海豹突击队
 	Selectable:
 		Bounds: 20, 30, 0, -11
 	Health:
@@ -375,9 +375,9 @@ ccomand:
 	Buildable:
 		BuildPaletteOrder: 170
 		Prerequisites: ~gapile, ~allies.tech.infiltrated
-		Description: Elite commando infantry, armed with\na sub machine gun and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\nSpecial Ability: Destroy Building with C4
+		Description: 装备冲锋枪和C4炸弹的超时空特种部队\n\n·无法一击杀死步兵\n·C4炸弹无法一击摧毁建筑\n·射程比海豹突击队更远\n不会死于“超级武器：超时空传送”\n无法被一般载具碾压\n\n·强势对抗：步兵、建筑\n·弱势对抗：飞行器\n\n·特殊能力：超时空传送\n·特殊能力：爆
 	Tooltip:
-		Name: Chrono Commando
+		Name: 超时空突击队
 	Valued:
 		Cost: 2000
 	UpdatesPlayerStatistics:
@@ -421,7 +421,7 @@ ptroop:
 	Buildable:
 		BuildPaletteOrder: 180
 		Prerequisites: ~gapile, ~soviets.tech.infiltrated
-		Description: Psychic infantry. Can mind control enemy units.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Dogs, Terror Drones, Aircraft\nSpecial Ability: Destroy Building with C4
+		Description: 具有心灵控制能力的特种部队\n\n·C4炸弹无法一击摧毁建筑\n·可以释放出冲击波快速消灭步兵\n\n·强势对抗：步兵、载具、建筑\n·弱势对抗：军犬、遥控坦克、恐怖机器人、飞行器\n\n·特殊能力：爆破建筑\n·特殊能力：心灵震爆
 	Valued:
 		Cost: 1000
 	UpdatesPlayerStatistics:
@@ -430,7 +430,7 @@ ptroop:
 		Payload: 500
 		PlayerExperience: 50
 	Tooltip:
-		Name: Psi Commando
+		Name: 心灵突击队
 	-PortableChrono:
 	Armament@primary:
 		Weapon: MindControl
@@ -472,7 +472,7 @@ tany:
 		BuildPaletteOrder: 140
 		Prerequisites: gatech, ~gapile
 		BuildLimit: 1
-		Description: Elite commando infantry, armed with \ndual pistols and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\nSpecial Ability: Destroy Building with C4\n\nMaximum 1 can be trained.
+		Description: 手持双枪的两栖特种兵精英\n\n·可以一击杀死大部分步兵\n·C4炸弹可以一击爆破建筑\n·同一玩家最多只能同时拥有一个（不计算复制工厂）\n无法被一般载具辗压\n\n·强势对抗：步兵、载具、建筑\n·弱势对抗：飞行器\n\n·特殊能力：两栖\n·特殊能力：爆破建筑\n·特殊能力：爆破舰艇
 	Valued:
 		Cost: 1000
 	UpdatesPlayerStatistics:
@@ -482,7 +482,7 @@ tany:
 		PlayerExperience: 50
 		Voice: Move
 	Tooltip:
-		Name: Tanya
+		Name: 谭雅
 	Selectable:
 		Bounds: 20, 30, 0, -11
 	Health:
@@ -528,13 +528,13 @@ jumpjet:
 		BuildAtProductionType: Infantry
 		BuildPaletteOrder: 60
 		Prerequisites: ~gapile, radar
-		Description: Airborne soldier.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles
+		Description: 飞行在天空中的步兵\n\n·强势对抗：步兵、飞行器\n·弱势对抗：载具
 	Valued:
 		Cost: 600
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Rocketeer
+		Name: 火箭飞行兵
 	Selectable:
 		Bounds: 20, 30, 0, -11
 	Health:
@@ -609,7 +609,7 @@ jumpjet.husk:
 	-RenderVoxels:
 	-WithVoxelBody:
 	Tooltip:
-		Name: Rocketeer
+		Name: 火箭飞行兵
 	Aircraft:
 		TurnSpeed: 40
 		Speed: 140
@@ -626,13 +626,13 @@ cleg:
 	Selectable:
 		Bounds: 20, 30, 0, -11
 	Tooltip:
-		Name: Chrono Legionnaire
+		Name: 超时空军团兵
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Infantry
 		BuildPaletteOrder: 150
 		Prerequisites: ~gapile, gatech
-		Description: High-tech soldier.\n Strong vs Infantry, Vehicles\n Weak vs Aircraft
+		Description: 超时空特种兵\n\n·强势对抗：地面目标\n·弱势对抗：飞行器\n\n·特殊能力：超时空传送
 	ProducibleWithLevel:
 		Prerequisites: barracks.infiltrated
 	Valued:

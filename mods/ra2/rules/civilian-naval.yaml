@@ -4,7 +4,7 @@ tug:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Tug Boat
+		Name: 拖船
 	Mobile:
 		TurnSpeed: 8
 		Speed: 60
@@ -29,7 +29,7 @@ cruise:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Cruise Ship
+		Name: 游轮
 	Mobile:
 		TurnSpeed: 4
 		Speed: 60
@@ -50,7 +50,7 @@ cdest:
 	Inherits: dest
 	-Buildable:
 	Tooltip:
-		Name: Coast Guard Boat
+		Name: 海岸警卫队船
 	Armor:
 		Type: Light
 	-Voiced:

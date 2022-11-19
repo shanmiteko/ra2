@@ -1,0 +1,27 @@
+Container@SCRIPT_ERROR_PANEL:
+	Height: PARENT_BOTTOM
+	Width: PARENT_RIGHT
+	Children:
+		Label@DESCA:
+			X: 15
+			Y: 16
+			Width: PARENT_RIGHT - 30
+			Height: 20
+			Font: Bold
+			Align: Center
+			Text: 地图脚本遇到致命错误
+		Label@DESCB:
+			X: 15
+			Y: 46
+			Width: PARENT_RIGHT - 30
+			Height: 20
+			Font: Regular
+			WordWrap: true
+			Text: 错误的详细信息已保存到logs目录中的lua.log中。
+		Label@DESCC:
+			X: 15
+			Y: 66
+			Width: PARENT_RIGHT - 30
+			Height: 20
+			Font: Regular
+			Text: 请将此文件发送给地图作者，以便他们可以解决此问题。

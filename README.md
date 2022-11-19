@@ -9,3 +9,9 @@ Consult the [wiki](https://github.com/shanmiteko/ra2-zh/wiki) for instructions o
 [![Bountysource](https://api.bountysource.com/badge/tracker?tracker_id=27677844)](https://www.bountysource.com/teams/openra/issues?tracker_ids=27677844)
 
 EA has not endorsed and does not support this product.
+
+# OpenRA 红色警戒2汉化版模组
+
+查阅 [wiki](https://github.com/shanmiteko/ra2-zh/wiki) 来获取如何安装此模组的说明。
+
+文本汉化来自[OpenRA-RA2SC](https://gitee.com/zgrsgr/open-ra-ra2sc)

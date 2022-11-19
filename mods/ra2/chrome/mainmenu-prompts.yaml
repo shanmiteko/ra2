@@ -1,0 +1,310 @@
+Background@MAINMENU_INTRODUCTION_PROMPT:
+	Logic: IntroductionPromptLogic
+	X: (WINDOW_RIGHT - WIDTH) / 2
+	Y: (WINDOW_BOTTOM - HEIGHT) / 2
+	Width: 600
+	Height: 430
+	Children:
+		Label@PROMPT_TITLE:
+			Width: PARENT_RIGHT
+			Y: 20
+			Height: 25
+			Font: Bold
+			Align: Center
+			Text: 欢迎归队，指挥官！
+		Label@DESC_A:
+			Width: PARENT_RIGHT
+			Y: 50
+			Height: 16
+			Font: Regular
+			Align: Center
+			Text: 作为建立战场控制的第一步，您需要选择下达指令的基本模式：
+		Label@DESC_B:
+			Width: PARENT_RIGHT
+			Y: 68
+			Height: 16
+			Font: Regular
+			Align: Center
+			Text: 您可以在“设置”选单中进行详细改动。
+		Label@PROFILE_TITLE:
+			Width: PARENT_RIGHT
+			Y: 100
+			Height: 25
+			Font: Bold
+			Align: Center
+			Text: 玩家
+		Label@PLAYER:
+			Text: 玩家名：
+			X: 20
+			Y: 130
+			Width: 120
+			Height: 25
+			Align: Right
+		TextField@PLAYERNAME:
+			X: 145
+			Y: 130
+			Width: 160
+			Height: 25
+			MaxLength: 16
+		Label@COLOR:
+			X: 265 + 60
+			Y: 130
+			Width: 145
+			Height: 25
+			Text: 偏好颜色：
+			Align: Right
+		ColorPreviewManager@COLOR_MANAGER:
+		DropDownButton@PLAYERCOLOR:
+			X: 415 + 60
+			Y: 130
+			Width: 75
+			Height: 25
+			IgnoreChildMouseOver: true
+			PanelAlign: Right
+			Children:
+				ColorBlock@COLORBLOCK:
+					X: 5
+					Y: 6
+					Width: PARENT_RIGHT - 35
+					Height: PARENT_BOTTOM - 12
+		Label@INPUT_TITLE:
+			Width: PARENT_RIGHT
+			Y: 160
+			Height: 25
+			Font: Bold
+			Align: Center
+			Text: 输入
+		Label@MOUSE_CONTROL_LABEL:
+			X: 20
+			Y: 190
+			Width: 120
+			Height: 25
+			Font: Regular
+			Text: 控制模式：
+			Align: Right
+		DropDownButton@MOUSE_CONTROL_DROPDOWN:
+			X: 145
+			Y: 190
+			Width: 160
+			Height: 25
+			Font: Regular
+		Checkbox@EDGESCROLL_CHECKBOX:
+			X: 365
+			Y: 193
+			Width: 180
+			Height: 20
+			Font: Regular
+			Text: 地图边缘滚屏
+		Container@MOUSE_CONTROL_DESC_CLASSIC:
+			X: 25
+			Y: 220
+			Width: PARENT_RIGHT - 50
+			Children:
+				LabelWithHighlight@DESC_SELECTION:
+					Height: 16
+					Font: Small
+					Text: - 使用{鼠标左键}选取单位
+				LabelWithHighlight@DESC_COMMANDS:
+					Y: 17
+					Height: 16
+					Font: Small
+					Text: - 使用{鼠标左键}下达指令
+				LabelWithHighlight@DESC_BUILDIGS:
+					Y: 34
+					Height: 16
+					Font: Small
+					Text: - 使用{鼠标左键}放置建筑
+				LabelWithHighlight@DESC_SUPPORT:
+					X: 265
+					Height: 16
+					Font: Small
+					Text: - 使用{鼠标左键}施放支援技能
+				LabelWithHighlight@DESC_ZOOM:
+					X: 265
+					Y: 17
+					Height: 16
+					Font: Small
+					Text: - 使用{鼠标滚轮}缩放视距
+				LabelWithHighlight@DESC_ZOOM_MODIFIER:
+					X: 265
+					Y: 17
+					Height: 16
+					Font: Small
+					Text: - 使用{MODIFIER + 鼠标滚轮}缩放视距
+				LabelWithHighlight@DESC_SCROLL_RIGHT:
+					X: 265
+					Y: 34
+					Height: 16
+					Font: Small
+					Text: - 按住{鼠标右键}滚屏
+				LabelWithHighlight@DESC_SCROLL_MIDDLE:
+					X: 265
+					Y: 34
+					Height: 16
+					Font: Small
+					Text: - 按住{鼠标中键}滚屏
+				Label@DESC_EDGESCROLL:
+					X: 274
+					Y: 51
+					Height: 16
+					Font: Small
+					Text: 或将鼠标移动到地图边缘滚动屏幕
+		Container@MOUSE_CONTROL_DESC_MODERN:
+			X: 25
+			Y: 220
+			Width: PARENT_RIGHT - 50
+			Children:
+				LabelWithHighlight@DESC_SELECTION:
+					Height: 16
+					Font: Small
+					Text: - 使用{鼠标左键}选取单位
+				LabelWithHighlight@DESC_COMMANDS:
+					Y: 17
+					Height: 16
+					Font: Small
+					Text: - 使用{鼠标右键}下达指令
+				LabelWithHighlight@DESC_BUILDIGS:
+					Y: 34
+					Height: 16
+					Font: Small
+					Text: - 使用{鼠标左键}放置建筑
+				LabelWithHighlight@DESC_SUPPORT:
+					X: 265
+					Height: 16
+					Font: Small
+					Text: - 使用{鼠标左键}施放支援技能
+				LabelWithHighlight@DESC_ZOOM:
+					X: 265
+					Y: 17
+					Height: 16
+					Font: Small
+					Text: - 使用{鼠标滚轮}缩放视距
+				LabelWithHighlight@DESC_ZOOM_MODIFIER:
+					X: 265
+					Y: 17
+					Height: 16
+					Font: Small
+					Text: - 使用{MODIFIER + 鼠标滚轮}缩放视距
+				LabelWithHighlight@DESC_SCROLL_RIGHT:
+					X: 265
+					Y: 34
+					Height: 16
+					Font: Small
+					Text: - 按住{鼠标右键}滚屏
+				LabelWithHighlight@DESC_SCROLL_MIDDLE:
+					X: 265
+					Y: 34
+					Height: 16
+					Font: Small
+					Text: - 按住{鼠标中键}滚屏
+				Label@DESC_EDGESCROLL:
+					X: 274
+					Y: 51
+					Height: 16
+					Font: Small
+					Text: 或将鼠标移动到地图边缘滚动屏幕
+		Label@INPUT_TITLE:
+			Width: PARENT_RIGHT
+			Y: 290
+			Height: 25
+			Font: Bold
+			Align: Center
+			Text: 显示
+		Label@BATTLEFIELD_CAMERA:
+			X: 20
+			Y: 320
+			Width: 120
+			Height: 25
+			Text: 视距：
+			Align: Right
+		DropDownButton@BATTLEFIELD_CAMERA_DROPDOWN:
+			X: 145
+			Y: 320
+			Width: 160
+			Height: 25
+			Font: Regular
+		Label@UI_SCALE:
+			X: 270
+			Y: 320
+			Width: 145
+			Height: 25
+			Text: UI缩放：
+			Align: Right
+		DropDownButton@UI_SCALE_DROPDOWN:
+			X: 420
+			Y: 320
+			Width: 160
+			Height: 25
+			Font: Regular
+		Checkbox@CURSORDOUBLE_CHECKBOX:
+			X: 390
+			Y: 353
+			Width: 200
+			Height: 20
+			Font: Regular
+			Text: 更大的指针
+		Button@CONTINUE_BUTTON:
+			X: PARENT_RIGHT - 180
+			Y: PARENT_BOTTOM - 45 
+			Width: 160
+			Height: 25
+			Text: 继续
+			Font: Bold
+			Key: return
+
+Background@MAINMENU_SYSTEM_INFO_PROMPT:
+	Logic: SystemInfoPromptLogic
+	X: (WINDOW_RIGHT - WIDTH) / 2
+	Y: (WINDOW_BOTTOM - HEIGHT) / 2
+	Width: 600
+	Height: 430
+	Children:
+		Label@PROMPT_TITLE:
+			Width: PARENT_RIGHT
+			Y: 20
+			Height: 25
+			Font: Bold
+			Align: Center
+			Text: 欢迎归队，指挥官！
+		Label@PROMPT_TEXT_A:
+			X: 15
+			Y: 50
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Center
+			Text: 我们想收集一些有助于我们优化OpenRA的细节。
+		Label@PROMPT_TEXT_B:
+			X: 15
+			Y: 68
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Center
+			Text: 如您许可的话，我们将获取以下匿名的系统数据：
+		ScrollPanel@SYSINFO_DATA:
+			X: 20
+			Y: 98
+			Width: PARENT_RIGHT - 40
+			Height: 355-98-10
+			TopBottomSpacing: 4
+			ItemSpacing: 4
+			Children:
+				Label@DATA_TEMPLATE:
+					X: 8
+					Height: 13
+					VAlign: Top
+					Font: Small
+		Checkbox@SYSINFO_CHECKBOX:
+			X: 390
+			Y: 353
+			Width: 200
+			Height: 20
+			Font: Regular
+			Text: 确认发送系统信息
+		Button@CONTINUE_BUTTON:
+			X: PARENT_RIGHT - WIDTH - 20
+			Y: PARENT_BOTTOM - 45
+			Width: 160
+			Height: 25
+			Text: 继续
+			Font: Bold
+			Key: return

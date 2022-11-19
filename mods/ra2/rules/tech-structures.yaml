@@ -11,7 +11,7 @@ caoild:
 		Interval: 100
 		Amount: 20
 	Tooltip:
-		Name: Tech Oil Derrick
+		Name: 科技钻油井
 	Health:
 		HP: 1000
 	RevealsShroud:
@@ -44,7 +44,7 @@ caairp:
 	Inherits: ^TechBuilding
 	Inherits@shape: ^3x2Shape
 	Tooltip:
-		Name: Tech Airport
+		Name: 科技机场
 	Armor:
 		Type: concrete
 	Health:
@@ -66,8 +66,8 @@ caairp:
 		OrderName: AlliedParatroopers
 		Icon: paradrop
 		ChargeInterval: 9000
-		Description: Allied Paratroopers
-		LongDesc: A Cargo Plane drops six GIs\nanywhere on the map.
+		Description: 盟军伞兵
+		LongDesc: 可降落6个美国大兵的运输机\n·于地图任意位置
 		DropItems: e1,e1,e1,e1,e1,e1
 		QuantizedFacings: 8
 		UnitType: pdplane
@@ -78,9 +78,8 @@ caairp:
 		OrderName: SovietParatroopers
 		Icon: paradrop
 		ChargeInterval: 9000
-		Description: Soviet Paratroopers
-		LongDesc: A Cargo Plane drops nine conscripts\nanywhere on the map.
-		DropItems: e2,e2,e2,e2,e2,e2,e2,e2,e2
+		Description: 苏联伞兵
+		LongDesc: 可降落6个动员兵的运输机\n·于地图任意位置
 		QuantizedFacings: 8
 		UnitType: pdplane
 		CameraActor: camera
@@ -108,10 +107,10 @@ cahosp:
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx xxxx xxxx
 		Dimensions: 6, 4
-	IsometricSelectable:
+    IsometricSelectable:
 		Height: 105
 	Tooltip:
-		Name: Civilian Hospital
+		Name: 平民医院
 	Health:
 		HP: 800
 	RevealsShroud:
@@ -140,7 +139,7 @@ cahosp.rubble:
 cathosp:
 	Inherits: cahosp
 	EditorOnlyTooltip:
-		Name: Tech Hospital
+		Name: 科技医院
 	RenderSprites:
 		Image: cahosp
 
@@ -150,7 +149,7 @@ caoutp:
 	IsometricSelectable:
 		Height: 90
 	Tooltip:
-		Name: Tech Outpost
+		Name: 科技前哨站
 	Armor:
 		Type: Concrete
 	Health:

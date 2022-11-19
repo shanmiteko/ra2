@@ -5,11 +5,11 @@ amcv:
 		Queue: Vehicle
 		BuildPaletteOrder: 80
 		Prerequisites: ~gaweap, gadept
-		Description: Deploys into a Construction Yard.
+		Description: 部署一个建造场
 	Valued:
 		Cost: 3000
 	Tooltip:
-		Name: Mobile Construction Vehicle
+		Name: 盟军机动建设车
 	Selectable:
 		Priority: 4
 		Bounds: 68, 56, 0, -7
@@ -46,13 +46,13 @@ cmin:
 		Queue: Vehicle
 		BuildPaletteOrder: 10
 		Prerequisites: ~gaweap, refinery
-		Description: Gathers Ore.\n  Unarmed\nSpecial ability: Can teleport to own refineries
+		Description: 采集矿物或宝石\n  无武装\n特殊能力：超时空传送
 	Valued:
 		Cost: 1400
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Chrono Miner
+		Name: 超时空采矿车
 	Selectable:
 		Priority: 7
 		Bounds: 64, 52, 0, -6
@@ -109,12 +109,12 @@ mtnk:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Grizzly Battle Tank
+		Name: 灰熊坦克
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 20
 		Prerequisites: ~gaweap
-		Description: Allied Main Battle Tank.\n  Strong vs Vehicles, Ships\n  Weak vs Infantry, Aircraft
+		Description: 盟军主战坦克\n·强势对抗：载具、建筑、舰艇\n·弱势对抗：步兵、飞行器
 	Mobile:
 		Speed: 105
 		TurnSpeed: 20
@@ -161,14 +161,14 @@ tnkd:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Tank Destroyer
+		Name: 坦克杀手
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 40
 		Prerequisites: ~vehicles.germany
-		Description: Special anti-armor unit.\n  Strong vs Vehicles, Ships\n  Weak vs Infantry, Aircraft
+		Description: 盟军主战坦克\n·强势对抗：载具、建筑、舰艇\n·弱势对抗：步兵、飞行器
 	Mobile:
 		Speed: 75
 		TurnSpeed: 20
@@ -214,12 +214,12 @@ fv:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Infantry Fighting Vehicle
+		Name: 多功能步兵车
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 30
 		Prerequisites: ~gaweap
-		Description: Multi-Purpose Vehicle.\nWithout passenger:\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles, Ships\nSpecial Ability: Armament depends on passenger.
+		Description: 多用途战斗车\n·可装载步兵\n·强势对抗：步兵，飞机\n·弱势对抗：车辆，船只\n·特殊能力：武器取决于装载步兵
 	Mobile:
 		Speed: 150
 		TurnSpeed: 20
@@ -364,13 +364,13 @@ sref:
 		Queue: Vehicle
 		BuildPaletteOrder: 50
 		Prerequisites: gatech, ~gaweap
-		Description: Fires deadly beams of light.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Description: 装备棱镜武器以发射灼热光束\n·强势对抗：步兵、载具\n·弱势对抗：飞行器
 	Valued:
 		Cost: 1200
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Prism Tank
+		Name: 光棱坦克
 	Selectable:
 		Bounds: 64, 52, 0, -10
 	Health:
@@ -437,17 +437,17 @@ mgtk:
 		Queue: Vehicle
 		BuildPaletteOrder: 70
 		Prerequisites: gatech, ~gaweap
-		Description: As tree disguised tank.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Description: 可伪装成树的坦克\n·强势对抗：步兵、载具\n·弱势对抗：建筑
 	Valued:
 		Cost: 1000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Mirage Tank
+		Name: 幻影坦克
 		RequiresCondition: !tree
 	MirageTooltip@Tree:
-		Name: Mirage Tank
-		GenericName: Tree
+		Name: 幻影坦克
+		GenericName: 树
 		GenericVisibility: Enemy, Neutral
 		RequiresCondition: tree
 	Mirage:

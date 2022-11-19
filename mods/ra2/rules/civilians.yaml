@@ -12,44 +12,40 @@ civ3:
 civa:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: Texan
+		Name: 平民
 	Voiced:
 		VoiceSet: CivilianTexanVoice
 
 civb:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: Texan
+		Name: 平民
 	Voiced:
 		VoiceSet: CivilianTexanVoice
 
 civc:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: Texan
+		Name: 平民
 	Voiced:
 		VoiceSet: CivilianTexanVoice
 
 civbbp:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: Baseball Player
+		Name: 棒球手
 
 civbfm:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: Beach Fat Male
-	-WithInfantryBody:
-	WithInfantryBody:
-		IdleSequences: idle1
-		StandSequences: stand
+		Name: 海滩胖男
 
 civbf:
 	Inherits: ^CivilianInfantry
 	Voiced:
 		VoiceSet: CivilianAlliedFemaleVoice
 	Tooltip:
-		Name: Beach Fat Female
+		Name: 海滩胖女
 	-WithInfantryBody:
 	WithInfantryBody:
 		IdleSequences: idle1
@@ -58,7 +54,7 @@ civbf:
 civbtm:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: Beach Thin Male
+		Name: 海滩瘦男
 	-WithInfantryBody:
 	WithInfantryBody:
 		IdleSequences: idle1
@@ -67,28 +63,28 @@ civbtm:
 civsfm:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: Snow Fat Male
+		Name: 雪胖男
 	Voiced:
 		VoiceSet: CivilianSovietMaleVoice
 
 civsf:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: Snow Fat Male
+		Name: 雪胖男
 	Voiced:
 		VoiceSet: CivilianSovietFemaleVoice
 
 civstm:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: Snow Thin Male
+        Name: 雪瘦男
 	Voiced:
 		VoiceSet: CivilianSovietMaleVoice
 
 vladimir:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: Vladimir
+		Name: 维拉迪摩
 		GenericVisibility: None
 	WithInfantryBody:
 		IdleSequences: idle1, idle2
@@ -96,7 +92,7 @@ vladimir:
 pentgen:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: Pentagon General
+		Name: 五角大楼将军
 		GenericVisibility: None
 	Voiced:
 		VoiceSet: GIVoice
@@ -104,7 +100,7 @@ pentgen:
 ssrv:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: Secret Service
+		Name: 间谍
 		GenericVisibility: None
 	Voiced:
 		VoiceSet: SecretServiceVoice
@@ -112,7 +108,7 @@ ssrv:
 pres:
 	Inherits: ^CivilianInfantry
 	Tooltip:
-		Name: President
+		Name: 美国总统
 		GenericVisibility: None
 	-WithInfantryBody:
 	WithInfantryBody:

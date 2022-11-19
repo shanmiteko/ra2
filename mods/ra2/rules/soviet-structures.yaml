@@ -5,7 +5,7 @@ nacnst:
 		Queue: Building
 		BuildPaletteOrder: 1000
 		Prerequisites: ~disabled
-		Description: Allows construction of base structures.
+		Description: 允许建造基础建筑
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
@@ -24,7 +24,7 @@ nacnst:
 	Production:
 		Produces: Building, Support
 	Tooltip:
-		Name: Construction Yard
+		Name: 苏联建造场
 	BaseBuilding:
 	BaseProvider:
 		Range: 0
@@ -80,11 +80,11 @@ napowr:
 		Queue: Building
 		BuildPaletteOrder: 10
 		Prerequisites: ~structures.soviets
-		Description: Provides power for other structures.
+		Description: 为基地其他建筑提供电力
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Tesla Reactor
+		Name: 磁化反应器
 	ProvidesPrerequisite:
 		Prerequisite: power
 	Building:
@@ -127,11 +127,11 @@ nahand:
 		Queue: Building
 		BuildPaletteOrder: 20
 		Prerequisites: power, ~structures.soviets
-		Description: Produces infantry.
+		Description: 生产步兵
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Barracks
+		Name: 苏联兵营
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	ProvidesPrerequisite@cuba:
@@ -199,7 +199,7 @@ nahand:
 		IsPlayerPalette: false
 	WithTextDecoration@primary:
 		RequiresSelection: true
-		Text: PRIMARY
+		Text: 主要
 		Position: Top
 		RequiresCondition: primary
 	ProductionBar:
@@ -224,13 +224,13 @@ narefn:
 		Queue: Building
 		BuildPaletteOrder: 30
 		Prerequisites: power, ~structures.soviets
-		Description: Processes ore into credits.
+		Description: 将矿石加工成金额
 	IsometricSelectable:
 		Height: 90
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Ore Refinery
+		Name: 苏联矿石精炼厂
 	ProvidesPrerequisite:
 		Prerequisite: refinery
 	ProvidesPrerequisite@default:
@@ -285,11 +285,11 @@ naradr:
 		Queue: Building
 		BuildPaletteOrder: 60
 		Prerequisites: power, narefn, ~structures.soviets
-		Description: Provides radar.
+		Description: 提供战术地图
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Radar Tower
+		Name: 雷达
 	ProvidesPrerequisite:
 		Prerequisite: radar
 	ProvidesPrerequisite@default:
@@ -332,13 +332,13 @@ naweap:
 		Queue: Building
 		BuildPaletteOrder: 40
 		Prerequisites: refinery, nahand, ~structures.soviets
-		Description: Produces vehicles.
+		Description: 生产载具
 	IsometricSelectable:
 		Height: 90
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: War Factory
+		Name: 战争工厂
 	ProvidesPrerequisite@libya:
 		Prerequisite: vehicles.libya
 		Factions: libya
@@ -368,7 +368,7 @@ naweap:
 		SelectionNotification: PrimaryBuildingSelected
 	WithTextDecoration@primary:
 		RequiresSelection: true
-		Text: PRIMARY
+		Text: 主要
 		Position: Top
 		RequiresCondition: primary
 	ProductionBar:
@@ -420,12 +420,12 @@ nayard:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Naval Yard
+		Name: 造船厂
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 50
 		Prerequisites: power, refinery, ~structures.soviets
-		Description: Produces and repairs ships,\nsubmarines, transports, and other naval units.
+		Description: 生产和修理船只\n·海军、运输船和其他海军单位
 	Targetable:
 		TargetTypes: Ground, Water, C4
 	ProvidesPrerequisite@default:
@@ -433,7 +433,7 @@ nayard:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
 		TerrainTypes: Water
-	IsometricSelectable:
+    IsometricSelectable:
 		Height: 120
 	-GivesBuildableArea:
 	Health:
@@ -517,7 +517,7 @@ nayard:
 		SelectionNotification: PrimaryBuildingSelected
 	WithTextDecoration@primary:
 		RequiresSelection: true
-		Text: PRIMARY
+		Text: 主要
 		Position: Top
 		RequiresCondition: primary
 	RallyPoint:
@@ -555,13 +555,13 @@ nadept:
 		Queue: Building
 		BuildPaletteOrder: 70
 		Prerequisites: naweap, ~structures.soviets
-		Description: Repairs vehicles and removes Terror Drones (for a price).
+		Description: 消费资金来维修载具并清除恐怖机器人
 	IsometricSelectable:
 		Height: 90
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Service Depot
+		Name: 维修厂
 	ProvidesPrerequisite:
 		Prerequisite: repairpad
 	Building:
@@ -604,11 +604,11 @@ nanrct:
 		Queue: Building
 		BuildPaletteOrder: 90
 		Prerequisites: natech, ~structures.soviets
-		Description: Provides power for other structures.
+		Description: 为基地其他建筑提供大量电力
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Nuclear Reactor
+		Name: 核子反应器
 	ProvidesPrerequisite:
 		Prerequisite: power
 	Building:
@@ -655,11 +655,11 @@ natech:
 		Queue: Building
 		BuildPaletteOrder: 80
 		Prerequisites: naweap, naradr, ~structures.soviets
-		Description: Allows deployment of advanced units.
+		Description: 允许建设高级科技
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Battle Lab
+		Name: 作战实验室
 	ProvidesPrerequisite@default:
 	Building:
 		Footprint: xxx xxx xxx
@@ -693,11 +693,11 @@ naclon:
 		BuildPaletteOrder: 100
 		Prerequisites: natech, ~structures.soviets
 		BuildLimit: 1
-		Description: Clones most trained infantry.
+		Description: 克隆最训练有素的步兵
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Cloning Vats
+		Name: 复制中心
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
@@ -768,11 +768,11 @@ napsis:
 		Queue: Support
 		BuildPaletteOrder: 60
 		Prerequisites: natech, ~structures.soviets
-		Description: Detects enemy units and strikepoints
+		Description: 探测敌军单位和攻击位置
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Psychic Sensor
+		Name: 心灵探测器
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -808,11 +808,11 @@ nairon:
 		BuildPaletteOrder: 80
 		Prerequisites: natech, ~structures.soviets, ~techlevel.unrestricted
 		BuildLimit: 1
-		Description: Grants invulnerability to armored units.\nFries fleshy units.
+		Description: 使装甲部队不受伤害\n·会导致肉体兵种死亡
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Iron Curtain Device
+		Name: 铁幕装置
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3, 3
@@ -829,8 +829,8 @@ nairon:
 	GrantExternalConditionPower@IRONCURTAIN:
 		Icon: invuln
 		ChargeInterval: 7500
-		Description: Iron Curtain
-		LongDesc: Makes a group of units invulnerable\nfor 20 seconds.
+		Description: 铁幕装置
+		LongDesc: 使一组单位在20秒内不受伤害
 		Duration: 500
 		# TODO: These are actually no speech notifications
 		EndChargeSound: siroread.wav
@@ -858,11 +858,11 @@ namisl:
 		BuildPaletteOrder: 90
 		Prerequisites: natech, ~structures.soviets, ~techlevel.unrestricted
 		BuildLimit: 1
-		Description: Provides an atomic bomb.\nRequires power to operate.\n  Special Ability: Atom Bomb\nMaximum 1 can be built.
+		Description: 提供核弹\n·需要电力才能操作\n·特殊能力：核弹\n·最多可制造1个
 	Valued:
 		Cost: 5000
 	Tooltip:
-		Name: Nuclear Missile Silo
+		Name: 核弹发射井
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3, 3
@@ -884,8 +884,8 @@ namisl:
 		Cursor: nuke
 		Icon: abomb
 		ChargeInterval: 15000
-		Description: Nuclear Missile
-		LongDesc: Launches a devastating atomic bomb\nat a target location.
+		Description: 核弹
+		LongDesc: 在目标位置发射毁灭性的核弹
 		EndChargeSound: snukread.wav
 		EndChargeSpeechNotification: AtomBombReady
 		LaunchSound: snuklaun.wav
@@ -920,9 +920,9 @@ nawall:
 		Queue: Support
 		BuildPaletteOrder: 10
 		Prerequisites: barracks, ~structures.soviets
-		Description: Light wall.\nCrushable by vehicles.
+		Description: 轻型墙壁\n·可被载具毁坏
 	Tooltip:
-		Name: Soviet Wall
+		Name: 苏联城墙
 
 naflak:
 	Inherits: ^VoxelLighting
@@ -931,11 +931,11 @@ naflak:
 		Queue: Support
 		BuildPaletteOrder: 30
 		Prerequisites: barracks, ~structures.soviets
-		Description: Automated anti-aircraft defense.
+		Description: 自动防空建筑
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Flak Cannon
+		Name: 防空炮
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
@@ -982,11 +982,11 @@ tesla:
 		Queue: Support
 		BuildPaletteOrder: 40
 		Prerequisites: naradr, ~structures.soviets
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Description: 先进基地防御\n·需要电力才能运作\n·强势对抗：步兵、舰艇\n·弱势对抗：飞行器
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Tesla Coil
+		Name: 磁暴线圈
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
@@ -1039,11 +1039,11 @@ nalasr:
 		Queue: Support
 		BuildPaletteOrder: 20
 		Prerequisites: barracks, ~structures.soviets
-		Description: Automated anti-infantry defense.
+		Description: 全自动反步兵防御
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Sentry Gun
+		Name: 哨戒炮
 	Building:
 		Footprint: x
 		Dimensions: 1, 1

@@ -1,0 +1,140 @@
+Background@KICK_CLIENT_DIALOG:
+	Width: PARENT_RIGHT
+	Height: PARENT_BOTTOM
+	Logic: KickClientLogic
+	Background: dialog3
+	Children:
+		Label@TITLE:
+			Y: 41
+			Width: PARENT_RIGHT
+			Height: 25
+			Font: Bold
+			Align: Center
+		Label@TEXTA:
+			Y: 68
+			Width: PARENT_RIGHT
+			Height: 25
+			Font: Regular
+			Align: Center
+			Text: 您也可以临时禁止
+		Label@TEXTB:
+			Y: 86
+			Width: PARENT_RIGHT
+			Height: 25
+			Font: Regular
+			Align: Center
+			Text: 他们参加本场比赛的剩余部分。
+		Checkbox@PREVENT_REJOINING_CHECKBOX:
+			X: (PARENT_RIGHT - WIDTH) / 2
+			Y: 120
+			Width: 150
+			Height: 20
+			Text: 临时禁止
+		Button@OK_BUTTON:
+			X: (PARENT_RIGHT - WIDTH) / 2 + 75
+			Y: 155
+			Width: 120
+			Height: 25
+			Text: 踢出房间
+			Font: Bold
+		Button@CANCEL_BUTTON:
+			X: (PARENT_RIGHT - WIDTH) / 2 - 75
+			Y: 155
+			Width: 120
+			Height: 25
+			Text: 取消
+			Font: Bold
+
+Background@KICK_SPECTATORS_DIALOG:
+	Width: PARENT_RIGHT
+	Height: PARENT_BOTTOM
+	Logic: KickSpectatorsLogic
+	Background: dialog3
+	Children:
+		Label@TITLE:
+			Y: 41
+			Width: PARENT_RIGHT
+			Height: 25
+			Font: Bold
+			Align: Center
+			Text: 将观战者踢出房间
+		Label@TEXT:
+			Y: 86
+			Width: PARENT_RIGHT
+			Height: 25
+			Font: Regular
+			Align: Center
+		Button@OK_BUTTON:
+			X: (PARENT_RIGHT - WIDTH) / 2 + 75
+			Y: 155
+			Width: 120
+			Height: 25
+			Text: 确认
+			Font: Bold
+		Button@CANCEL_BUTTON:
+			X: (PARENT_RIGHT - WIDTH) / 2 - 75
+			Y: 155
+			Width: 120
+			Height: 25
+			Text: 取消
+			Font: Bold
+
+Background@FORCE_START_DIALOG:
+	Width: PARENT_RIGHT
+	Height: PARENT_BOTTOM
+	Background: dialog3
+	Children:
+		Label@TITLE:
+			Y: 41
+			Width: PARENT_RIGHT
+			Height: 25
+			Font: Bold
+			Align: Center
+			Text: 开始游戏？
+		Label@TEXTA:
+			Y: 68
+			Width: PARENT_RIGHT
+			Height: 25
+			Font: Regular
+			Align: Center
+			Text: 仍有玩家尚未准备好。
+		Label@TEXTB:
+			Y: 86
+			Width: PARENT_RIGHT
+			Height: 25
+			Font: Regular
+			Align: Center
+			Text: 你确定要强行开始游戏吗？
+		Container@KICK_WARNING:
+			Width: PARENT_RIGHT
+			Children:
+				Label@KICK_WARNING_A:
+					X: 0
+					Y: 107
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Bold
+					Align: Center
+					Text: 一个或多个客户端缺少选定的地图，
+				Label@KICK_WARNING_B:
+					X: 0
+					Y: 124
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Bold
+					Align: Center
+					Text: 他们将被踢出游戏。
+		Button@OK_BUTTON:
+			X: (PARENT_RIGHT - WIDTH) / 2 + 75
+			Y: 155
+			Width: 120
+			Height: 25
+			Text: 开始
+			Font: Bold
+		Button@CANCEL_BUTTON:
+			X: (PARENT_RIGHT - WIDTH) / 2 - 75
+			Y: 155
+			Width: 120
+			Height: 25
+			Text: 取消
+			Font: Bold

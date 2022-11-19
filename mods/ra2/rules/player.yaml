@@ -83,6 +83,8 @@ Player:
 		SpeechNotification: LowPower
 	AllyRepair:
 	PlayerResources:
+    	DefaultCashDropdownLabel: 起始资金
+		DefaultCashDropdownDescription: 更改玩家起始资金的数额
 		CashTickUpNotification: CashTickUp
 		CashTickDownNotification: CashTickDown
 	DeveloperMode:
@@ -90,11 +92,15 @@ Player:
 		CheckboxDisplayOrder: 5
 	GpsWatcher:
 	Shroud:
+    	FogCheckboxLabel: 战争迷雾
+		FogCheckboxDescription: 开启后玩家无法得知视野范围之外的情况
+		ExploredMapCheckboxLabel: 已探索地形
+		ExploredMapCheckboxDescription: 开启后玩家在开局时获得整个战场的地形情报	
 		FogCheckboxDisplayOrder: 3
 	LobbyPrerequisiteCheckbox@GLOBALFACTUNDEPLOY:
 		ID: factundeploy
-		Label: Redeployable MCVs
-		Description: Allow undeploying Construction Yard.
+		Label: MCV重新部署
+		Description: 允许取消部署建造场
 		Enabled: True
 		DisplayOrder: 7
 		Prerequisites: global-factundeploy
@@ -111,19 +117,19 @@ Player:
 		ArrowSequence:
 		CircleSequence:
 	ProvidesTechPrerequisite@infonly:
-		Name: Infantry Only
+		Name: 仅步兵
 		Prerequisites: techlevel.infonly
 		Id: infantryonly
 	ProvidesTechPrerequisite@low:
-		Name: Low
+		Name: 低
 		Prerequisites: techlevel.infonly, techlevel.low
 		Id: low
 	ProvidesTechPrerequisite@medium:
-		Name: Medium
+		Name: 中
 		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium
 		Id: medium
 	ProvidesTechPrerequisite@unrestricted:
-		Name: Unrestricted
+		Name: 无限制
 		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.unrestricted
 		Id: unrestricted
 	GrantConditionOnPrerequisiteManager:

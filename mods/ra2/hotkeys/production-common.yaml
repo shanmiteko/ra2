@@ -1,0 +1,103 @@
+CycleProductionBuildings: TAB Ctrl
+	Description: 切换面板
+	Types: Production, Player, Spectator
+
+SelectProductionBuilding: TAB
+	Description: 当前生产设施
+	Types: Production, Player
+
+Production01: F1
+	Description: 位置01
+	Types: ProductionSlot, Player
+
+Production02: F2
+	Description: 位置02
+	Types: ProductionSlot, Player
+
+Production03: F3
+	Description: 位置03
+	Types: ProductionSlot, Player
+
+Production04: F4
+	Description: 位置04
+	Types: ProductionSlot, Player
+
+Production05: F5
+	Description: 位置05
+	Types: ProductionSlot, Player
+
+Production06: F6
+	Description: 位置06
+	Types: ProductionSlot, Player
+
+Production07: F7
+	Description: 位置07
+	Types: ProductionSlot, Player
+
+Production08: F8
+	Description: 位置08
+	Types: ProductionSlot, Player
+
+Production09: F9
+	Description: 位置09
+	Types: ProductionSlot, Player
+
+Production10: F10
+	Description: 位置10
+	Types: ProductionSlot, Player
+
+Production11: F11
+	Description: 位置11
+	Types: ProductionSlot, Player
+
+Production12: F12
+	Description: 位置12
+	Types: ProductionSlot, Player
+
+Production13: F1 CTRL
+	Description: 位置13
+	Types: ProductionSlot, Player
+
+Production14: F2 CTRL
+	Description: 位置14
+	Types: ProductionSlot, Player
+
+Production15: F3 CTRL
+	Description: 位置15
+	Types: ProductionSlot, Player
+
+Production16: F4 CTRL
+	Description: 位置16
+	Types: ProductionSlot, Player
+
+Production17: F5 CTRL
+	Description: 位置17
+	Types: ProductionSlot, Player
+
+Production18: F6 CTRL
+	Description: 位置18
+	Types: ProductionSlot, Player
+
+Production19: F7 CTRL
+	Description: 位置19
+	Types: ProductionSlot, Player
+
+Production20: F8 CTRL
+	Description: 位置20
+	Types: ProductionSlot, Player
+
+Production21: F9 CTRL
+	Description: 位置21
+	Types: ProductionSlot, Player
+
+Production22: F10 CTRL
+	Description: 位置22
+	Types: ProductionSlot, Player
+
+Production23: F11 CTRL
+	Description: 位置23
+	Types: ProductionSlot, Player
+
+Production24: F12 CTRL
+	Description: 位置24
+	Types: ProductionSlot, Player

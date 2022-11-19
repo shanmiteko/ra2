@@ -1,0 +1,23 @@
+SupportPower01:
+	Description: 位置1
+	Types: SupportPower, Player
+
+SupportPower02:
+	Description: 位置2
+	Types: SupportPower, Player
+
+SupportPower03:
+	Description: 位置3
+	Types: SupportPower, Player
+
+SupportPower04:
+	Description: 位置4
+	Types: SupportPower, Player
+
+SupportPower05:
+	Description: 位置5
+	Types: SupportPower, Player
+
+SupportPower06:
+	Description: 位置6
+	Types: SupportPower, Player

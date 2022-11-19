@@ -423,7 +423,7 @@
 	RevealsShroud:
 		Range: 4c0
 	Tooltip:
-		Name: Civilian Building
+		Name: 平民建筑
 	MapEditorData:
 		Categories: Civilian building
 
@@ -475,7 +475,7 @@
 		Footprint: x
 		Dimensions: 1, 1
 	Tooltip:
-		Name: Flag
+		Name: 旗
 	Health:
 		HP: 20
 	Armor:
@@ -655,7 +655,7 @@
 
 ^Parachutable:
 	WithSpriteBody@Parachute:
-		Name: parachute
+		Name: 降落伞
 		Sequence: paradrop
 		RequiresCondition: parachute
 	Parachutable:
@@ -751,8 +751,8 @@
 		PlayerExperience: 2
 		Voice: Move
 	Tooltip:
-		Name: Civilian
-		GenericName: Civilian
+		Name: 平民
+		GenericName: 平民
 		GenericVisibility: Enemy, Ally, Neutral
 		GenericStancePrefix: false
 	Health:
@@ -893,7 +893,7 @@
 		Action: ChangeOwner
 	RenderSprites:
 	Tooltip:
-		GenericName: Civilian Vehicle
+		GenericName: 平民载具
 	Valued:
 		Cost: 800
 	Mobile:
@@ -1015,7 +1015,7 @@
 		Type: CenterPosition
 	ScriptTriggers:
 	Tooltip:
-		GenericName: Destroyed Aircraft
+		GenericName: 被毁的飞行器
 	Health:
 		HP: 1
 	FallsToEarth:
@@ -1085,7 +1085,7 @@
 		CameraPitch: 85
 		UseClassicPerspectiveFudge: false
 	Tooltip:
-		GenericName: Ship
+		GenericName: 船
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -1110,7 +1110,7 @@
 ^OreDrill:
 	Inherits@1: ^SpriteActor
 	Tooltip:
-		Name: Ore Drill
+		Name: 凿岩机
 	WithSpriteBody:
 	Building:
 		Footprint: x
@@ -1144,7 +1144,7 @@
 	AppearsOnRadar:
 	BodyOrientation:
 	Tooltip:
-		Name: Tree
+		Name: 树
 	QuantizeFacingsFromSequence:
 	RenderSprites:
 		Palette: terrain
@@ -1163,7 +1163,7 @@
 ^StreetSign:
 	Inherits: ^Tree
 	Tooltip:
-		Name: Street Sign
+		Name: 路标
 	MapEditorData:
 		Categories: Decoration
 	-MirageTarget:
@@ -1171,7 +1171,7 @@
 ^TrafficLight:
 	Inherits: ^Tree
 	Tooltip:
-		Name: Traffic Light
+		Name: 交通灯
 	MapEditorData:
 		Categories: Decoration
 	-MirageTarget:
@@ -1179,7 +1179,7 @@
 ^StreetLight:
 	Inherits: ^Tree
 	Tooltip:
-		Name: Street Light
+		Name: 路灯
 	Armor:
 		Type: steel
 	Health:
@@ -1191,7 +1191,7 @@
 ^TelephonePole:
 	Inherits: ^Tree
 	Tooltip:
-		Name: Utility Pole
+		Name: 电线杆
 	Health:
 		HP: 20
 	Armor:
@@ -1210,7 +1210,7 @@
 	AppearsOnRadar:
 	BodyOrientation:
 	Tooltip:
-		Name: Rock
+		Name: 岩石
 	QuantizeFacingsFromSequence:
 	RenderSprites:
 		Palette: terrain
@@ -1224,8 +1224,8 @@
 	Inherits@1: ^SpriteActor
 	HiddenUnderFog:
 	Tooltip:
-		Name: Crate
-		GenericName: Crate
+		Name: 箱子
+		GenericName: 箱子
 	Crate:
 		TerrainTypes: Clear, Rough, Road, Ore, Gems
 	RenderSprites:

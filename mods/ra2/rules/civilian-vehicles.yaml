@@ -1,7 +1,7 @@
 bus:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: School Bus
+		Name: 校车
 	Cargo:
 		Types: Infantry
 		MaxWeight: 20
@@ -20,7 +20,7 @@ bus:
 limo:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Presidential Limousine
+		Name: 总统豪华轿车
 	Cargo:
 		Types: Infantry
 		MaxWeight: 20
@@ -39,80 +39,79 @@ limo:
 pick:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Pickup Truck
+		Name: 货车
 
 car:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Automobile
+		Name: 汽车
 
 wini:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Recreational Vehicle
+		Name: 休闲车
 	RenderVoxels:
 		NormalsPalette: ts-normals
 
 propa:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Propaganda Truck
+		Name: Name: 宣传车
 
 cop:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Police Car
+		Name: 警车
 
 euroc:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: European Car
+		Name: 欧洲车
 	RenderVoxels:
 		NormalsPalette: ts-normals
 
 cona:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Excavator
+		Name: 挖掘机
 	RenderVoxels:
 		NormalsPalette: ts-normals
 
 trucka:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Truck
-
+ 		Name: 卡车
 truckb:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Truck
+		Name: 卡车
 
 suvb:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Black SUV
+		Name: 黑色轿车
 
 suvw:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: White SUV
+		Name: 白色轿车
 
 stang:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Mustang
-		GenericName: Sports Car
+		Name: 野马轿车
+		GenericName: 跑车
 	RenderVoxels:
 		NormalsPalette: ts-normals
 
 ptruck:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Pickup Truck
+		Name: 货车
 
 taxi:
 	Inherits: ^CivVehicle
 	Tooltip:
-		Name: Taxi
+		Name: 出租车
 	RenderVoxels:
 		NormalsPalette: ts-normals

@@ -8,7 +8,7 @@
 	ScreenMap:
 	TerrainGeometryOverlay:
 	TerrainRenderer:
-	ResourceRenderer:
+    ResourceRenderer:
 		RenderTypes: Ore, Gems
 	DebugVisualizations:
 	Locomotor@FOOT:
@@ -113,68 +113,68 @@
 		FogPalette: shroud
 		ShroudPalette: shroud
 	Faction@random:
-		Name: Random
+		Name: 随机
 		InternalName: Random
 		RandomFactionMembers: random-allies, random-soviets
-		Side: Randoms
-		Description: Random Country\nA random country will be chosen when the game starts.
+		Side: 随机
+		Description: 随机国家/地区\n·游戏开始时将选择随机国家/地区
 	Faction@allies:
-		Name: Allies
+		Name: 随机盟军
 		InternalName: random-allies
 		RandomFactionMembers: america, germany, england, france, korea
-		Side: Randoms
-		Description: Random Allied Country\nA random Allied country will be chosen when the game starts.
+		Side: 随机
+		Description: 随机盟军\n·游戏开始时将选择随机盟军
 	Faction@soviets:
-		Name: Soviets
+		Name: 随机苏联
 		InternalName: random-soviets
 		RandomFactionMembers: cuba, libya, iraq, russia
-		Side: Randoms
-		Description: Random Soviet Country\nA random Soviet country will be chosen when the game starts.
+		Side: 随机
+		Description: 随机苏联\n·游戏开始时将选择随机苏联
 	Faction@1:
-		Name: America
+		Name: 美国
 		InternalName: america
-		Side: Allies
-		Description: America\nSpecial Ability: Paratroopers
+		Side: 盟军
+		Description: 美国\n特殊能力：伞兵
 	Faction@2:
-		Name: Germany
+		Name:德国
 		InternalName: germany
-		Side: Allies
-		Description: Germany\nSpecial Vehicle: Tank Destroyer
+		Side: 盟军
+		Description: 德国\n特殊载具：坦克杀手
 	Faction@3:
-		Name: England
+		Name:英国
 		InternalName: england
-		Side: Allies
-		Description: England\nSpecial Infantry: Sniper
+		Side: 盟军
+		Description: 英国\n·特殊兵种：狙击手
 	Faction@4:
-		Name: France
+		Name:法国
 		InternalName: france
-		Side: Allies
-		Description: France\nSpecial Building: Grand Cannon
+		Side: 盟军
+		Description: 法国\n·特殊建筑：巨炮
 	Faction@5:
-		Name: Korea
+		Name: 韩国
 		InternalName: korea
-		Side: Allies
-		Description: Korea\nSpecial Aircraft: Black Eagle
+		Side: 盟军
+		Description: 韩国\n·特殊空军：黑鹰战机
 	Faction@6:
-		Name: Cuba
+		Name: 古巴
 		InternalName: cuba
-		Side: Soviets
-		Description: Cuba\nSpecial Infantry: Terrorist
+		Side: 苏联
+		Description: 古巴\n·特殊兵种：恐怖分子
 	Faction@7:
-		Name: Libya
+		Name: 利比亚
 		InternalName: libya
-		Side: Soviets
-		Description: Libya\nSpecial Vehicle: Demolition Truck
+		Side: 苏联
+		Description: 利比亚\n·特殊载具：自爆卡车
 	Faction@8:
-		Name: Iraq
+		Name: 伊拉克
 		InternalName: iraq
-		Side: Soviets
-		Description: Iraq\nSpecial Infantry: Desolator
+		Side: 苏联
+		Description: 伊拉克\n·特殊兵种：辐射工兵
 	Faction@9:
-		Name: Russia
+		Name: 苏俄
 		InternalName: russia
-		Side: Soviets
-		Description: Russia\nSpecial Vehicle: Tesla Tank
+		Side: 苏联
+		Description: 苏俄\n·特殊载具：磁能坦克
 	ResourceType@Ore:
 		ResourceType: 1
 		Palette: resource
@@ -182,7 +182,7 @@
 		MaxDensity: 12
 		ValuePerUnit: 25
 		Type: Ore
-		Name: Valuable Minerals
+		Name: 金矿
 		AllowedTerrainTypes: Clear, Rough, Road
 		AllowUnderActors: false
 		TerrainType: Ore
@@ -193,7 +193,7 @@
 		MaxDensity: 12
 		ValuePerUnit: 50
 		Type: Gems
-		Name: Valuable Minerals
+		Name: 宝石矿
 		AllowedTerrainTypes: Clear, Rough, Road
 		AllowUnderActors: false
 		TerrainType: Gems
@@ -261,19 +261,25 @@ World:
 		AllyBuildRadiusCheckboxDisplayOrder: 4
 		BuildRadiusCheckboxVisible: false
 	MapOptions:
+		ShortGameCheckboxLabel: 快速游戏
+		ShortGameCheckboxDescription: 消灭敌方所有基础建筑与移动基地车即可获胜
 		ShortGameCheckboxDisplayOrder: 2
+		TechLevelDropdownLabel: 科技等级限制
+		TechLevelDropdownDescription: 限制玩家最高能使用的科技技术
 		TechLevelDropdownDisplayOrder: 3
+		GameSpeedDropdownLabel: 游戏速度
+		GameSpeedDropdownDescription: 更改游戏内时间的流速
 		GameSpeedDropdownDisplayOrder: 4
 	CreateMPPlayers:
 	MPStartUnits@amcv:
 		Class: none
-		ClassName: MCV Only
+		ClassName: 仅MCV
 		Factions: allies, america, germany, england, france, korea
 		BaseActor: amcv
 		BaseActorFacing: 896
 	MPStartUnits@lightallies:
 		Class: light
-		ClassName: Light Support
+		ClassName: 轻型部队
 		Factions: allies, america, germany, england, france, korea
 		BaseActor: amcv
 		BaseActorFacing: 896
@@ -283,7 +289,7 @@ World:
 		OuterSupportRadius: 5
 	MPStartUnits@mediumallies:
 		Class: medium
-		ClassName: Medium Support
+		ClassName: 中型部队
 		Factions: allies, america, germany, england, france, korea
 		BaseActor: amcv
 		BaseActorFacing: 896
@@ -293,7 +299,7 @@ World:
 		OuterSupportRadius: 5
 	MPStartUnits@heavyallies:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: 重型部队
 		Factions: allies, america, germany, england, france, korea
 		BaseActor: amcv
 		BaseActorFacing: 896
@@ -303,13 +309,13 @@ World:
 		OuterSupportRadius: 5
 	MPStartUnits@smcv:
 		Class: none
-		ClassName: MCV Only
+		ClassName: 仅MCV
 		Factions: soviets, cuba, libya, iraq, russia
 		BaseActor: smcv
 		BaseActorFacing: 896
 	MPStartUnits@lightsoviets:
 		Class: light
-		ClassName: Light Support
+		ClassName: 轻型部队
 		Factions: soviets, cuba, libya, iraq, russia
 		BaseActor: smcv
 		BaseActorFacing: 896
@@ -319,7 +325,7 @@ World:
 		OuterSupportRadius: 5
 	MPStartUnits@mediumsoviets:
 		Class: medium
-		ClassName: Medium Support
+		ClassName: 中型部队
 		Factions: soviets, cuba, libya, iraq, russia
 		BaseActor: smcv
 		BaseActorFacing: 896
@@ -329,7 +335,7 @@ World:
 		OuterSupportRadius: 5
 	MPStartUnits@heavysoviets:
 		Class: heavy
-		ClassName: Heavy Support
+		ClassName: 重型部队
 		Factions: soviets, cuba, libya, iraq, russia
 		BaseActor: smcv
 		BaseActorFacing: 896
@@ -338,6 +344,8 @@ World:
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	CrateSpawner:
+		CheckboxLabel: 随机工具箱
+		CheckboxDescription: 开启后地图上随机出现奖惩效果不一的工具箱
 		Minimum: 1
 		Maximum: 3
 		SpawnInterval: 3000
@@ -345,8 +353,12 @@ World:
 		InitialSpawnDelay: 1000
 		CheckboxDisplayOrder: 1
 	MPStartLocations:
-		SeparateTeamSpawnsCheckboxDisplayOrder: 6
+    	SeparateTeamSpawnsCheckboxLabel: 安全出生点
+		SeparateTeamSpawnsCheckboxDescription: 启用后所有随机出生的玩家将被分配到尽可能远离对手的位置
+        SeparateTeamSpawnsCheckboxDisplayOrder: 6
 	SpawnMPUnits:
+		DropdownLabel: 初始部队
+		DropdownDescription: 调整玩家初始部队的规模
 		DropdownDisplayOrder: 2
 	PathFinder:
 	ValidateOrder:
@@ -358,6 +370,8 @@ World:
 	LoadWidgetAtGameStart:
 		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
 	TimeLimitManager:
+    	TimeLimitLabel: 时限作战
+		TimeLimitDescription: 游戏进行到选定时刻时，得分最高的玩家或小队将会立即获得胜利
 		TimeLimitDisplayOrder: 1
 		TimeLimitWarnings:
 			1: OneMinuteRemaining

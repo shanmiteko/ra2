@@ -3,7 +3,7 @@ shad:
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Inherits@MC: ^MindControllable
 	Tooltip:
-		Name: Night Hawk
+		Name: 夜鹰直升机
 	Selectable:
 		Bounds: 70,60,0,-20
 	Health:
@@ -21,7 +21,7 @@ shad:
 		Queue: Vehicle
 		BuildPaletteOrder: 90
 		Prerequisites: ~gaweap
-		Description: Infantry Transport Helicopter\nUndetectable by radar.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: 专用于运送步兵的武装直升机\n\n·强势对抗：步兵\n·弱势对抗：载具、飞行器
 	Valued:
 		Cost: 1000
 	UpdatesPlayerStatistics:
@@ -68,7 +68,7 @@ shad:
 shadhusk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Night Hawk
+		Name: 夜鹰直升机 
 	Aircraft:
 		TurnSpeed: 40
 		Speed: 140
@@ -90,11 +90,12 @@ zep:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Kirov Airship
+		Name: 基洛夫空艇
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 90
-		Prerequisites: ~naweap, natech
+  		Prerequisites: ~naweap, natech
+		Description: 装备大量高爆炸弹与自我修复能力的苏联重型飞艇\n\n·必须在目标正上方才能投弹\n\n·强势对抗：建筑\n·弱势对抗：步兵、载具、飞行器
 	Selectable:
 		Bounds: 100,60,0,-10
 	Aircraft:
@@ -144,7 +145,7 @@ zep:
 zephusk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Kirov Airship
+		Name: 基洛夫空艇
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 25
@@ -166,12 +167,12 @@ orca:
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Harrier
+		Name: 入侵者战机
 	Buildable:
 		Queue: Aircraft
 		BuildPaletteOrder: 10
 		Prerequisites: ~aircraft.harrier
-		Description: Fast assault fighter\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+		Description: 高速对地攻击机\n\n·有建造数量限制\n·强势对抗：建筑、载具\n·弱势对抗：步兵、飞行器
 	Aircraft:
 		TurnSpeed: 12
 		Speed: 210
@@ -215,7 +216,7 @@ orca:
 orcahusk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: Harrier
+		Name: 入侵者战机
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 210
@@ -225,7 +226,7 @@ orcahusk:
 beag:
 	Inherits: orca
 	Tooltip:
-		Name: Black Eagle
+		Name: 黑鹰战机
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: ~aircraft.korea
@@ -246,7 +247,7 @@ beag:
 beaghusk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: Black Eagle
+		Name: 黑鹰战机
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 210
@@ -262,7 +263,7 @@ pdplane:
 		Bounds: 100,80
 	RejectsOrders:
 	Tooltip:
-		Name: Cargo Plane
+		Name: 运输机
 	Aircraft:
 		Repulsable: false
 		CruiseAltitude: 5600
@@ -286,7 +287,7 @@ pdplane:
 pdplanehusk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: Cargo Plane
+		Name: 运输机
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 100
@@ -302,7 +303,7 @@ hornet:
 	GainsExperience:
 		ExperienceModifier: 500
 	Tooltip:
-		Name: Hornet
+		Name: 舰载机
 	Interactable:
 		Bounds: 15,12
 	Health:
@@ -349,7 +350,7 @@ hornet:
 hornethusk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: Hornet
+		Name: 舰载机
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 180
@@ -368,7 +369,7 @@ asw:
 	GainsExperience:
 		ExperienceModifier: 500
 	Tooltip:
-		Name: Osprey
+		Name: 鹗式运输机
 	Health:
 		HP: 135
 	Armor:
@@ -420,9 +421,9 @@ asw:
 aswhusk:
 	Inherits: ^PlaneHusk
 	Tooltip:
-		Name: Osprey
+		Name: 鹗式运输机
 	Tooltip@NoRow:
-		Name: Osprey
+		Name: 鹗式运输机
 	Aircraft:
 		TurnSpeed: 20
 		Speed: 180

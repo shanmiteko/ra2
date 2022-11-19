@@ -1,0 +1,111 @@
+CycleBase: H
+	Description: 跳转到建筑工厂
+	Types: World, Player, Spectator
+
+ToLastEvent: SPACE
+	Description: 跳转到最近的雷达提示
+	Types: World, Player, Spectator
+
+ToSelection: HOME
+	Description: 跳转到选中的单位
+	Types: World, Player, Spectator
+
+SelectAllUnits: Q
+	Description: 选中所有作战单位
+	Types: World, Player, Spectator
+
+SelectUnitsByType: W
+	Description: 选中所有同类单位
+	Types: World, Player, Spectator
+
+CycleHarvesters: N
+	Description: 循环选中矿车
+	Types: World, Player, Spectator
+
+RemoveFromControlGroup:
+	Description: 从选中单位中移除
+	Types: World, Player
+
+Pause: PAUSE
+	Description: 暂停 / 继续
+	Types: World, Player, Spectator
+
+Sell: Z
+	Description: 出售
+	Types: OrderGenerator, Player
+
+Repair: C
+	Description: 维修
+	Types: OrderGenerator, Player
+
+PlaceBeacon: B
+	Description: 放置信标
+	Types: OrderGenerator, Player, Spectator
+
+CycleStatusBars: COMMA
+	Description: 显示生命条
+	Types: World, Player, Spectator
+
+ToggleMute: M
+	Description: 静音
+	Types: World, Menu, Player, Spectator
+
+TogglePlayerStanceColor: COMMA Ctrl
+	Description: 敌友颜色模式
+	Types: World, Player, Spectator
+
+TakeScreenshot: P Ctrl
+	Description: 截屏
+	Types: World, Menu, Player, Spectator
+
+AttackMove: A
+	Description: 移动攻击
+	Types: Unit, Player
+
+Stop: S
+	Description: 停止
+	Types: Unit, Player
+
+Scatter: X Ctrl
+	Description: 分散
+	Types: Unit, Player
+
+Deploy: F
+	Description: 部署
+	Types: Unit, Player
+
+Guard: D
+	Description: 守卫
+	Types: Unit, Player
+
+StanceAttackAnything: A Alt
+	Description: 侵略姿态
+	Types: Stance, Player
+
+StanceDefend: S Alt
+	Description: 守卫姿态
+	Types: Stance, Player
+
+StanceReturnFire: D Alt
+	Description: 反击姿态
+	Types: Stance, Player
+
+StanceHoldFire: F Alt
+	Description: 停火姿态
+	Types: Stance, Player
+
+StopMusic: AUDIOSTOP
+	Description: 停止
+	Types: Music, Player, Spectator
+
+PauseMusic: AUDIOPLAY
+	Description: 暂停 / 恢复
+	Types: Music, Player, Spectator
+
+PrevMusic: AUDIOPREV
+	Description: 上一首
+	Types: Music, Player, Spectator
+
+NextMusic: AUDIONEXT
+	Description: 下一首
+	Types: Music, Player, Spectator

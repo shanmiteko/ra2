@@ -5,13 +5,13 @@ sapc:
 		Queue: Ship
 		BuildPaletteOrder: 10
 		Prerequisites: ~nayard
-		Description: General-purpose naval transport.\nCan carry infantry and vehicles.\n  Unarmed
+		Description: 通用海军运输工具\n可以携带步兵和车辆\n非武装
 	Valued:
 		Cost: 900
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Amphibious Transport
+		Name: 运输艇
 	Selectable:
 		Bounds: 60, 80, 0, -6
 	Health:
@@ -56,13 +56,13 @@ sub:
 		Queue: Ship
 		BuildPaletteOrder: 20
 		Prerequisites: ~nayard
-		Description: Submerged anti-ship unit armed with\ntorpedoes.\nCan detect other submarines and Giant Squids.\n  Strong vs Ships\n  Weak vs Ground units, Aircraft\nSpecial Ability: Submerge
-	Valued:
+		Description: 装备有潜艇的水下反舰部队\n可以探测到其他潜艇和巨型鱿鱼\n强势对抗：舰艇\n弱势对抗：地面部队，飞行器\n特殊能力：潜水
+    Valued:
 		Cost: 1000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Typhoon Attack Sub
+		Name: 台风攻击潜艇
 	Health:
 		HP: 600
 	Armor:
@@ -125,13 +125,13 @@ hyd:
 		Queue: Ship
 		BuildPaletteOrder: 30
 		Prerequisites: naradr, ~nayard
-		Description: Anti-Air/Anti-Infantry naval unit.\n  Strong vs Aircraft, Infantry\n  Weak vs Vehicles, Naval Units
+		Description: 反步兵防空炮艇\n\n·强势对抗：飞行器、步兵\n·弱势对抗：载具、舰艇
 	Valued:
 		Cost: 900
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Sea Scorpion
+		Name: 海蝎
 	Selectable:
 		Bounds: 50, 30, 0, -6
 	Health:
@@ -170,13 +170,13 @@ sqd:
 		Queue: Ship
 		BuildPaletteOrder: 40
 		Prerequisites: natech, ~nayard
-		Description: Ocean creature\npunches enemies in close combat.\n  Strong vs Ships
+		Description: 海洋生物\n在近距离攻击敌人\n强势对抗：舰艇
 	Valued:
 		Cost: 1000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Giant Squid
+		Name: 巨型乌贼
 	Armor:
 		Type: Light
 	Health:

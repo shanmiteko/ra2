@@ -5,13 +5,13 @@ lcrf:
 		Queue: Ship
 		BuildPaletteOrder: 10
 		Prerequisites: ~gayard
-		Description: General-purpose naval transport.\nCan carry infantry and vehicles.\n  Unarmed
+		Description: 通用海军运输工具\n·可以装在步兵和车辆\n·非武装
 	Valued:
 		Cost: 900
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Amphibious Transport
+		Name: 运输艇
 	Selectable:
 		Bounds: 60, 80, 0, -6
 	Health:
@@ -58,13 +58,13 @@ dest:
 		Queue: Ship
 		BuildPaletteOrder: 20
 		Prerequisites: ~gayard
-		Description: Allied Main Battle Ship armed with cannons and\n an Osprey helicopter.\nCan detect submarines and sea animals.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft
+		Description: 具备反潜与反舰能力的盟军主力舰艇\n\n·必须以鱼鹰反潜直升机攻击潜艇\n\n·强势对抗：舰艇\n·弱势对抗：地面目标、飞行器
 	Valued:
 		Cost: 1000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Destroyer
+		Name: 驱逐舰
 	Health:
 		HP: 600
 	Armor:
@@ -89,12 +89,12 @@ dest:
 		MuzzleSequence: muzzle-2
 		RequiresCondition: rank-elite
 	Armament@asw:
-		Name: asw
+		Name: 鹗式运输机
 		Weapon: ASWLauncher
 	CarrierParent:
 		Actors: asw
 		RespawnTicks: 300
-		ArmamentNames: asw
+		ArmamentNames: 鹗式运输机
 		LoadedCondition: loaded
 	WithCarrierParentPipsDecoration:
 		Position: BottomLeft
@@ -135,13 +135,13 @@ aegis:
 		Queue: Ship
 		BuildPaletteOrder: 30
 		Prerequisites: radar, ~gayard
-		Description: Anti-Air naval unit.\n  Strong vs Aircraft\n  Grounds units, Ships
+		Description: 装备强力防空导弹的盟军战舰\n·强势对抗：飞行器\n·弱势对抗：地面目标、舰艇
 	Valued:
 		Cost: 1200
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Aegis Cruiser
+		Name: 巡洋舰
 	Selectable:
 		Bounds: 60, 80, 0, -6
 	Health:
@@ -178,13 +178,13 @@ dlph:
 		Queue: Ship
 		BuildPaletteOrder: 40
 		Prerequisites: gatech, ~gayard
-		Description: Trained dolphin\narmed with sonic beams.\n  Strong vs Ships
+		Description: 经受军事训练且装备声波武器的反舰海豚\n\n仅能攻击舰艇和造船厂\n可以对一直线的目标造成伤害\n自身免疫上述范围伤害\n\n·强势对抗：舰艇
 	Valued:
 		Cost: 500
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Dolphin
+		Name: 海豚
 	Armor:
 		Type: Light
 	Health:
@@ -259,13 +259,13 @@ carrier:
 		Queue: Ship
 		BuildPaletteOrder: 60
 		Prerequisites: gatech, ~gayard
-		Description: Aircraft carrier ship.\n  Strong vs Tanks, Structures\n  Weak vs Infantry
+		Description: 搭载大量黄蜂无人攻击机的航空母舰\n\n·强势对抗：载具、建筑\n·弱势对抗：步兵
 	Valued:
 		Cost: 2000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Aircraft Carrier
+		Name: 航空母舰
 	Health:
 		HP: 800
 	Armor:

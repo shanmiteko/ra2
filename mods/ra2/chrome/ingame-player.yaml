@@ -12,8 +12,8 @@ Container@PLAYER_WIDGETS:
 					IconSize: 60, 48
 					IconSpriteOffset: -1, -1
 					TooltipContainer: TOOLTIP_CONTAINER
-					ReadyText: READY
-					HoldText: ON HOLD
+					ReadyText: 就绪
+					HoldText: 暂停
 					HotkeyPrefix: SupportPower
 					HotkeyCount: 6
 				Container@PALETTE_FOREGROUND:
@@ -56,8 +56,8 @@ Container@PLAYER_WIDGETS:
 					Background:
 					Key: AttackMove
 					DisableKeySound: true
-					TooltipText: Attack Move
-					TooltipDesc: Selected units will move to the desired location\nand attack any enemies they encounter en route.\n\nHold {(Ctrl)} while targeting to order an Assault Move\nthat attacks any units or structures encountered en route.\n\nLeft-click icon then right-click on target location.
+					TooltipText: 攻击
+					TooltipDesc: 选中的单位将移动到目标位置并攻击\n途中遇到的所有敌军\n\n按住{Ctrl}键并点击目标位置以下达扫荡命令\n或左键点击此图标，右键选取目标位置
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -74,8 +74,8 @@ Container@PLAYER_WIDGETS:
 					VisualHeight: 0
 					Background:
 					DisableKeySound: true
-					TooltipText: Force Move
-					TooltipDesc: Selected units will move to the desired location\n - Default activity for the target is suppressed\n - Vehicles will attempt to crush enemies at the target location\n\nLeft-click icon then right-click on target.\nHold {(Alt)} to activate temporarily while commanding units.
+					TooltipText: 强制移动
+					TooltipDesc: 选中的单位将移动到目标位置\n  · 此命令的优先级高于单位的姿态设置\n  · 载具将试图碾压目标位置的敌方步兵\n  · 步兵单位会尝试进入附近的相同运输单位\n  · 超时空单位会传送到目标位置\n\n按住{(Alt)}键并点击目标位置以下达此指令\n或者左键单击此图标，右键选择目标位置
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -92,8 +92,8 @@ Container@PLAYER_WIDGETS:
 					VisualHeight: 0
 					Background:
 					DisableKeySound: true
-					TooltipText: Force Attack
-					TooltipDesc: Selected units will attack the targeted unit or location\nignoring their default activity for the target.\n\nLeft-click icon then right-click on target.\nHold {(Ctrl)} to activate temporarily while commanding units.
+					TooltipText: 强制攻击
+					TooltipDesc: 选中的单位将攻击目标单位或目标位置\n忽略其在默认位置的默认动作\n\n按住{(Ctrl)}键并点击目标位置来下达此命令\n或者左键点击此图标，右键选择目标
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -111,8 +111,8 @@ Container@PLAYER_WIDGETS:
 					Background:
 					Key: Guard
 					DisableKeySound: true
-					TooltipText: Guard
-					TooltipDesc: Selected units will follow the targeted unit.\n\nLeft-click icon then right-click on target unit.
+					TooltipText: 守卫
+					TooltipDesc: 选中的单位将跟随并保护目标单位\n\n左键点击此图标，右键选择目标单位
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -130,8 +130,8 @@ Container@PLAYER_WIDGETS:
 					Key: Deploy
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Deploy
-					TooltipDesc: Selected units will perform their default deploy activity\n - MCVs will unpack into a Construction Yard\n - Construction Yards will re-pack into a MCV\n - Transports will unload their passengers\n - Demolition Trucks and MAD Tanks will self-destruct\n - Aircraft will return to base\n\nActs immediately on selected units.
+					TooltipText: 部署
+					TooltipDesc: 选中的单位将执行其默认的部署动作\n  · MCV会展开成为建筑工厂\n  · 建筑工厂会收起成为MCV\n  · 运输载具会撤离乘员\n  · 自爆卡车和伊文会执行自毁指令\n  · 飞行器会返回机场进行补给\n\n下达指令后立即生效
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -149,8 +149,8 @@ Container@PLAYER_WIDGETS:
 					Key: Scatter
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Scatter
-					TooltipDesc: Selected units will stop their current activity\nand move to a nearby location.\n\nActs immediately on selected units.
+					TooltipText: 分散
+					TooltipDesc: 选中的单位会停止其当前动作并随机\n移动到附近的其他位置\n\n下达指令后立即生效
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -168,8 +168,8 @@ Container@PLAYER_WIDGETS:
 					Key: Stop
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Stop
-					TooltipDesc: Selected units will stop their current activity.\n\nActs immediately on selected units.
+					TooltipText: 停止
+					TooltipDesc: 选中的单位将停止其当前动作\n\n下达指令后立即生效
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -185,8 +185,8 @@ Container@PLAYER_WIDGETS:
 					VisualHeight: 0
 					Background:
 					DisableKeySound: true
-					TooltipText: Waypoint Mode
-					TooltipDesc: Use Waypoint Mode to give multiple linking commands\nto the selected units. Units will execute the commands\nimmediately upon receiving them.\n\nLeft-click icon then give commands in the game world.\nHold {(Shift)} to activate temporarily while commanding units.
+					TooltipText: 计划模式
+					TooltipDesc: 使用计划模式来为单位下达多个连续命令\n单位将会立即按照计划指令依次执行\n\n左键点击此图标，然后依次下达指令\n按住{(Shift)}键可以临时进入计划模式
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -211,8 +211,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceAttackAnything
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Attack Anything Stance
-					TooltipDesc: Set the selected units to Attack Anything stance:\n - Units will attack enemy units and structures on sight\n - Units will pursue attackers across the battlefield
+					TooltipText: 侵略姿态
+					TooltipDesc: 命令选中单位进入侵略姿态：\n  · 单位将攻击视野内的所有敌方单位和建筑\n  · 单位将追击所有来犯的敌方单位
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -230,8 +230,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceDefend
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Defend Stance
-					TooltipDesc: Set the selected units to Defend stance:\n - Units will attack enemy units on sight\n - Units will not move or pursue enemies
+					TooltipText: 守卫姿态
+					TooltipDesc: 命令选中单位进入守卫姿态：\n  · 单位将攻击视野内所有敌方单位\n  · 单位不会主动移动或追击敌军
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -249,8 +249,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceReturnFire
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Return Fire Stance
-					TooltipDesc: Set the selected units to Return Fire stance:\n - Units will retaliate against enemies that attack them\n - Units will not move or pursue enemies
+					TooltipText: 反击姿态
+					TooltipDesc: 命令选中单位进入反击姿态：\n  · 单位将对敌方进攻进行反击\n  · 单位不会主动移动或追击敌军
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -268,8 +268,8 @@ Container@PLAYER_WIDGETS:
 					Key: StanceHoldFire
 					DisableKeyRepeat: true
 					DisableKeySound: true
-					TooltipText: Hold Fire Stance
-					TooltipDesc: Set the selected units to Hold Fire stance:\n - Units will not fire upon enemies\n - Units will not move or pursue enemies
+					TooltipText: 停火姿态
+					TooltipDesc: 命令选中的单位进入停火姿态：\n  · 单位将不会向敌军开火\n  · 单位不会主动移动或追击敌军
 					TooltipContainer: TOOLTIP_CONTAINER
 					Children:
 						Image@ICON:
@@ -301,7 +301,7 @@ Container@PLAYER_WIDGETS:
 							Width: 62
 							Height: 23
 							Background: debug-button
-							TooltipText: Debug Menu
+							TooltipText: 调试菜单
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
 						MenuButton@OPTIONS_BUTTON:
@@ -312,7 +312,7 @@ Container@PLAYER_WIDGETS:
 							Width: 69
 							Height: 23
 							Background: options-button
-							TooltipText: Options
+							TooltipText: 选项
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
 						Button@REPAIR_BUTTON:
@@ -323,7 +323,7 @@ Container@PLAYER_WIDGETS:
 							Height: 34
 							Background: repair-button
 							Key: Repair
-							TooltipText: Repair
+							TooltipText: 维修
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
 							Children:
@@ -339,7 +339,7 @@ Container@PLAYER_WIDGETS:
 							Height: 34
 							Background: beacon-button
 							Key: PlaceBeacon
-							TooltipText: Place Beacon
+							TooltipText: 放置信标
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
 							Children:
@@ -355,7 +355,7 @@ Container@PLAYER_WIDGETS:
 							Height: 34
 							Background: sell-button
 							Key: Sell
-							TooltipText: Sell
+							TooltipText: 售卖
 							TooltipContainer: TOOLTIP_CONTAINER
 							VisualHeight: 0
 							Children:
@@ -478,8 +478,8 @@ Container@PLAYER_WIDGETS:
 					X: 24
 					Y: 2
 					TooltipContainer: TOOLTIP_CONTAINER
-					ReadyText: READY
-					HoldText: ON HOLD
+					ReadyText: 就绪
+					HoldText: 暂停
 					IconSize: 60, 48
 					IconMargin: 2, 2
 					IconSpriteOffset: -1, -1
@@ -499,7 +499,7 @@ Container@PLAYER_WIDGETS:
 							Height: 32
 							VisualHeight: 0
 							Background: buildings-button
-							TooltipText: Buildings
+							TooltipText: 建筑
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Building
 							Key: ProductionTypeBuilding
@@ -516,7 +516,7 @@ Container@PLAYER_WIDGETS:
 							Height: 32
 							VisualHeight: 0
 							Background: support-button
-							TooltipText: Support
+							TooltipText: 防御
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Support
 							Key: ProductionTypeDefense
@@ -533,7 +533,7 @@ Container@PLAYER_WIDGETS:
 							Height: 32
 							VisualHeight: 0
 							Background: infantry-button
-							TooltipText: Infantry
+							TooltipText: 步兵
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Infantry
 							Key: ProductionTypeInfantry
@@ -550,7 +550,7 @@ Container@PLAYER_WIDGETS:
 							Height: 32
 							VisualHeight: 0
 							Background: vehicles-button
-							TooltipText: Vehicles
+							TooltipText: 载具
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Vehicle
 							Key: ProductionTypeVehicle
@@ -567,7 +567,7 @@ Container@PLAYER_WIDGETS:
 							Height: 32
 							VisualHeight: 0
 							Background: aircrafts-button
-							TooltipText: Aircraft
+							TooltipText: 飞行器
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Aircraft
 							Key: ProductionTypeAircraft
@@ -584,7 +584,7 @@ Container@PLAYER_WIDGETS:
 							Height: 32
 							VisualHeight: 0
 							Background: ships-button
-							TooltipText: Naval
+							TooltipText: 海军
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Ship
 							Key: ProductionTypeNaval
@@ -602,7 +602,7 @@ Container@PLAYER_WIDGETS:
 							Height: 27
 							VisualHeight: 0
 							Background: scrollup-buttons
-							TooltipText: Scroll up
+							TooltipText: 向上移动
 							TooltipContainer: TOOLTIP_CONTAINER
 						Button@SCROLL_DOWN_BUTTON:
 							Logic: AddFactionSuffixLogic
@@ -612,5 +612,5 @@ Container@PLAYER_WIDGETS:
 							Height: 27
 							VisualHeight: 0
 							Background: scrolldown-buttons
-							TooltipText: Scroll down
+							TooltipText: 向下移动
 							TooltipContainer: TOOLTIP_CONTAINER

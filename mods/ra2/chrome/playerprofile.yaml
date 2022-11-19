@@ -1,0 +1,230 @@
+Container@LOCAL_PROFILE_PANEL:
+	Logic: LocalProfileLogic
+	Width: 270
+	Height: 100
+	Children:
+		Background@PROFILE_HEADER:
+			Width: PARENT_RIGHT
+			Height: 50
+			Background: dialog2
+			Children:
+				Label@PROFILE_NAME:
+					X: 10
+					Y: 5
+					Width: PARENT_RIGHT - 20
+					Height: 25
+					Font: MediumBold
+				Label@PROFILE_RANK:
+					X: 10
+					Y: 24
+					Width: PARENT_RIGHT - 20
+					Height: 25
+					Font: TinyBold
+				Button@DESTROY_KEY:
+					X: PARENT_RIGHT - 70
+					Y: 15
+					Width: 60
+					Height: 20
+					Font: TinyBold
+					Text: 注销
+		Background@BADGES_CONTAINER:
+			Width: PARENT_RIGHT
+			Y: 48
+			Visible: false
+			Background: dialog3
+		Background@GENERATE_KEYS:
+			Width: PARENT_RIGHT
+			Height: PARENT_BOTTOM
+			Background: dialog2
+			Children:
+				Label@DESC_A:
+					Y: 5
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 连接到论坛帐户
+				Label@DESC_B:
+					Y: 21
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 以向其他玩家表明身份，
+				Label@DESC_C:
+					Y: 37
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 从而可以加入私人服务器并显示徽章。
+				Button@GENERATE_KEY:
+					X: (PARENT_RIGHT - WIDTH) / 2
+					Y: 70
+					Width: 240
+					Height: 20
+					Font: TinyBold
+					Text: 连接到OpenRA论坛帐户
+		Background@GENERATING_KEYS:
+			Width: PARENT_RIGHT
+			Height: PARENT_BOTTOM
+			Background: dialog2
+			Children:
+				Label@DESC_A:
+					Y: 13
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 生成身份验证密钥对。
+				Label@DESC_B:
+					Y: 29
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 请稍候......
+				ProgressBar:
+					X: (PARENT_RIGHT - WIDTH) / 2
+					Y: 70
+					Width: 240
+					Height: 20
+					Indeterminate: true
+		Background@REGISTER_FINGERPRINT:
+			Width: PARENT_RIGHT
+			Height: PARENT_BOTTOM
+			Background: dialog2
+			Children:
+				Label@DESC_A:
+					Y: 2
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 身份验证密钥已复制到剪贴板。
+				Label@DESC_B:
+					Y: 18
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 将其添加到OpenRA论坛上的“用户控制面板”，
+				Label@DESC_C:
+					Y: 34
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 然后按继续。
+				Button@DELETE_KEY:
+					X: 15
+					Y: 70
+					Width: 70
+					Height: 20
+					Font: TinyBold
+					Text: 取消
+				Button@CHECK_KEY:
+					X: 185
+					Y: 70
+					Width: 70
+					Height: 20
+					Font: TinyBold
+					Text: 继续
+		Background@CHECKING_FINGERPRINT:
+			Width: PARENT_RIGHT
+			Height: PARENT_BOTTOM
+			Background: dialog2
+			Children:
+				Label@DESC_A:
+					Y: 13
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 正从OpenRA论坛查询
+				Label@DESC_B:
+					Y: 29
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 该帐户详细信息......
+				ProgressBar:
+					X: (PARENT_RIGHT - WIDTH) / 2
+					Y: 70
+					Width: 240
+					Height: 20
+					Indeterminate: true
+		Background@FINGERPRINT_NOT_FOUND:
+			Width: PARENT_RIGHT
+			Height: PARENT_BOTTOM
+			Background: dialog2
+			Children:
+				Label@DESC_A:
+					Y: 13
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 您的身份验证密钥
+				Label@DESC_B:
+					Y: 29
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 未能连接到OpenRA论坛帐户。
+				Button@FINGERPRINT_NOT_FOUND_CONTINUE:
+					X: 185
+					Y: 70
+					Width: 70
+					Height: 20
+					Font: TinyBold
+					Text: 返回
+		Background@CONNECTION_ERROR:
+			Width: PARENT_RIGHT
+			Height: PARENT_BOTTOM
+			Background: dialog2
+			Children:
+				Label@DESC_A:
+					Y: 13
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 无法连接到OpenRA论坛。
+				Label@DESC_B:
+					Y: 29
+					Width: PARENT_RIGHT
+					Height: 25
+					Font: Small
+					Align: Center
+					Text: 请检查您的互联网连接。
+				Button@CONNECTION_ERROR_RETRY:
+					X: 185
+					Y: 70
+					Width: 70
+					Height: 20
+					Font: TinyBold
+					Text: 重试
+
+Container@PLAYER_PROFILE_BADGES_INSERT:
+	Logic: PlayerProfileBadgesLogic
+	Width: PARENT_RIGHT
+	Height: 110
+	Children:
+		Container@BADGE_TEMPLATE:
+			Width: PARENT_RIGHT
+			Height: 25
+			Children:
+				Badge@ICON:
+					X: 6
+					Y: 1
+					Width: 24
+					Height: 24
+				Label@LABEL:
+					X: 36
+					Y: 2
+					Width: PARENT_RIGHT - 60
+					Height: 24
+					Font: Bold

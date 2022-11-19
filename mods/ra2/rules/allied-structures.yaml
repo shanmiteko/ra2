@@ -5,7 +5,7 @@ gacnst:
 		Queue: Building
 		BuildPaletteOrder: 1000
 		Prerequisites: ~disabled
-		Description: Builds base structures.
+		Description: 建造基础建筑
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
@@ -22,7 +22,7 @@ gacnst:
 	Production:
 		Produces: Building,Support
 	Tooltip:
-		Name: Construction Yard
+		Name: 盟军建造场
 	BaseBuilding:
 	BaseProvider:
 		Range: 0
@@ -89,13 +89,13 @@ gapowr:
 		Queue: Building
 		BuildPaletteOrder: 10
 		Prerequisites: ~structures.allies
-		Description: Provides power for other structures.
+		Description: 为基地其他建筑提供电力
 	IsometricSelectable:
 		Height: 60
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Power Plant
+		Name: 发电厂
 	ProvidesPrerequisite:
 		Prerequisite: power
 	Building:
@@ -136,13 +136,13 @@ gapile:
 		Queue: Building
 		BuildPaletteOrder: 20
 		Prerequisites: power, ~structures.allies
-		Description: Trains infantry.
+		Description: 生产步兵
 	IsometricSelectable:
 		Height: 60
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Barracks
+		Name: 兵营
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	ProvidesPrerequisite@england:
@@ -181,7 +181,7 @@ gapile:
 		SelectionNotification: PrimaryBuildingSelected
 	WithTextDecoration@primary:
 		RequiresSelection: true
-		Text: PRIMARY
+		Text: 主要
 		Position: Top
 		RequiresCondition: primary
 	ProductionBar:
@@ -209,13 +209,13 @@ garefn:
 		Queue: Building
 		BuildPaletteOrder: 30
 		Prerequisites: power, ~structures.allies
-		Description: Processes ore into credits.
+		Description: 将矿石加工成资金
 	IsometricSelectable:
 		Height: 60
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Ore Refinery
+		Name: 矿石精炼场
 	ProvidesPrerequisite:
 		Prerequisite: refinery
 	ProvidesPrerequisite@default:
@@ -270,11 +270,11 @@ gaairc:
 		Queue: Building
 		BuildPaletteOrder: 60
 		Prerequisites: garefn, ~structures.allies, ~!structures.america
-		Description: Provides radar\nSupports 4 aircraft.
+		Description: 提供雷达\n·支援4架飞机
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Airforce Command Headquarters
+		Name: 空指部
 	ProvidesPrerequisite:
 		Prerequisite: radar
 	ProvidesPrerequisite@allies:
@@ -290,7 +290,7 @@ gaairc:
 		Footprint: xxx xxx
 		Dimensions: 3,2
 	IsometricSelectable:
-		Height: 105
+		Height: 60
 	Health:
 		HP: 600
 	Armor:
@@ -344,7 +344,7 @@ gaairc:
 		SelectionNotification: PrimaryBuildingSelected
 	WithTextDecoration@primary:
 		RequiresSelection: true
-		Text: PRIMARY
+		Text: 主要
 		Position: Top
 		RequiresCondition: primary
 	InfiltrateForExploration:
@@ -358,7 +358,7 @@ gaairc:
 amradr:
 	Inherits: gaairc
 	Tooltip:
-		Name: American Airforce Command Headquarters
+		Name: 空指部
 	Buildable:
 		Prerequisites: garefn, ~structures.america
 	WithSpriteBody:
@@ -370,8 +370,8 @@ amradr:
 		OrderName: AmericanParatroopers
 		Icon: airborne
 		ChargeInterval: 9000
-		Description: American Paratroopers
-		LongDesc: A Cargo Plane drops eight GIs\nanywhere on the map.
+		Description: 空降美国伞兵
+		LongDesc: 可降落8个美国大兵的运输机\n·于地图任意位置
 		DropItems: e1,e1,e1,e1,e1,e1,e1,e1
 		QuantizedFacings: 8
 		UnitType: pdplane
@@ -385,13 +385,13 @@ gaweap:
 		Queue: Building
 		BuildPaletteOrder: 40
 		Prerequisites: garefn, gapile, ~structures.allies
-		Description: Produces vehicles.
+		Description: 生产载具
 	IsometricSelectable:
 		Height: 60
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: War Factory
+		Name: 战争工厂
 	ProvidesPrerequisite@germany:
 		Prerequisite: vehicles.germany
 		Factions: germany
@@ -419,7 +419,7 @@ gaweap:
 		SelectionNotification: PrimaryBuildingSelected
 	WithTextDecoration@primary:
 		RequiresSelection: true
-		Text: PRIMARY
+		Text: 主要
 		Position: Top
 		RequiresCondition: primary
 	ProductionBar:
@@ -460,8 +460,8 @@ gaweap:
 	InfiltrateForSupportPower:
 		Types: SpyInfiltrate
 		Proxy: warfactory.infiltrated
-		InfiltrationNotification: BuildingInfiltratedTechnologyStolen
-		InfiltratedNotification: ArmorTechnologyStolen
+		InfiltrationNotification: BuildingInfiltratedRadarSabotaged
+		InfiltratedNotification: RadarSabotaged
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 	SpawnSurvivors:
@@ -474,12 +474,12 @@ gayard:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Naval Yard
+		Name: 造船厂
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 50
 		Prerequisites: power, refinery, ~structures.allies
-		Description: Produces and repairs ships,\nsubmarines, transports, and other naval units.
+		Description: 生产和修理船只、海军、运输船和其他海军单位
 	Targetable:
 		TargetTypes: Ground, Water, C4
 	ProvidesPrerequisite@default:
@@ -487,7 +487,7 @@ gayard:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
 		TerrainTypes: Water
-	IsometricSelectable:
+    IsometricSelectable:
 		Height: 120
 	-GivesBuildableArea:
 	Health:
@@ -571,7 +571,7 @@ gayard:
 		SelectionNotification: PrimaryBuildingSelected
 	WithTextDecoration@primary:
 		RequiresSelection: true
-		Text: PRIMARY
+		Text: 主要
 		Position: Top
 		RequiresCondition: primary
 	RallyPoint:
@@ -606,13 +606,13 @@ gadept:
 		Queue: Building
 		BuildPaletteOrder: 70
 		Prerequisites: gaweap, ~structures.allies
-		Description: Repairs vehicles and removes Terror Drones (for a price).
-	IsometricSelectable:
+		Description: 消费资金来维修载具并清除恐怖机器人
+    IsometricSelectable:
 		Height: 45
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Service Depot
+		Name: 维修厂
 	ProvidesPrerequisite@default:
 	Building:
 		Footprint: x== x== x==
@@ -655,13 +655,13 @@ gatech:
 		Queue: Building
 		BuildPaletteOrder: 80
 		Prerequisites: radar, gaweap, ~structures.allies
-		Description: Allows deployment of advanced units.
+		Description: 允许部署高级单位
 	IsometricSelectable:
 		Height: 180
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Battle Lab
+		Name: 作战实验室
 	ProvidesPrerequisite@default:
 	Building:
 		Footprint: xx xx xx
@@ -680,7 +680,7 @@ gatech:
 	InfiltrateForSupportPower:
 		Types: SpyInfiltrate
 		Proxy: allies.tech.infiltrated
-		InfiltrationNotification: BuildingInfiltratedTechnologyStolen
+        InfiltrationNotification: BuildingInfiltratedTechnologyStolen
 		InfiltratedNotification: TechnologyStolen
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
@@ -694,9 +694,9 @@ gawall:
 		Queue: Support
 		BuildPaletteOrder: 10
 		Prerequisites: barracks, ~structures.allies
-		Description: Light wall.\nCrushable by vehicles.
+		Description: 轻型墙壁\n·可被载具毁坏
 	Tooltip:
-		Name: Allied Wall
+		Name: 盟军围墙
 
 gapill:
 	Inherits: ^SupportBuilding
@@ -705,11 +705,11 @@ gapill:
 		Queue: Support
 		BuildPaletteOrder: 20
 		Prerequisites: barracks, ~structures.allies
-		Description: Automated anti-infantry defense.
+		Description: 自动反步兵防御
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Pill Box
+		Name: 机枪碉堡
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
@@ -747,11 +747,11 @@ nasam:
 		Queue: Support
 		BuildPaletteOrder: 30
 		Prerequisites: barracks, ~structures.allies
-		Description: Automated anti-aircraft defense.
+		Description: 自动防空
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Patriot Missile System
+		Name: 爱国者导弹
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
@@ -800,11 +800,11 @@ gtgcan:
 		Queue: Support
 		BuildPaletteOrder: 50
 		Prerequisites: radar, ~structures.france
-		Description: Automated, long ranged anti-ground defense.
+		Description: 远程自动对地防御
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Grand Cannon
+		Name: 巨炮
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
@@ -857,13 +857,13 @@ gaorep:
 		BuildPaletteOrder: 100
 		Prerequisites: garefn, gatech, ~structures.allies
 		BuildLimit: 1
-		Description: Refines all forms of income by 25%.
-	IsometricSelectable:
+		Description: 将所有形式的收入提高25%
+    IsometricSelectable:
 		Height: 60
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Ore Purifier
+		Name: 矿石提纯器
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -891,13 +891,13 @@ gaspysat:
 		Queue: Support
 		BuildPaletteOrder: 70
 		Prerequisites: gatech, ~structures.allies
-		Description: Reveals the entire battlefield.
+		Description: 显示整个战场
 	IsometricSelectable:
 		Height: 75
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Spy Satellite Uplink
+		Name: 间谍卫星
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -927,12 +927,12 @@ gagap:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Gap Generator
+		Name: 裂缝产生器
 	Buildable:
 		Queue: Support
 		BuildPaletteOrder: 60
 		Prerequisites: gatech, ~structures.allies
-		Description: Obscures the enemy's view with shroud.\nRequires power to operate.
+		Description: 用黑雾遮住敌人的视线\n·需要电量才能启动
 	IsometricSelectable:
 		Height: 90
 	GrantConditionOnPowerState@LOWPOWER:
@@ -962,13 +962,13 @@ gaweat:
 		BuildPaletteOrder: 90
 		Prerequisites: gatech, ~structures.allies, ~techlevel.unrestricted
 		BuildLimit: 1
-		Description: Play God with deadly weather!
+		Description: 用致命的天气扮演上帝！
 	IsometricSelectable:
 		Height: 75
 	Valued:
 		Cost: 5000
 	Tooltip:
-		Name: Weather Controller
+		Name: 天气控制仪
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -987,8 +987,8 @@ gaweat:
 		OrderName: WeatherControlDevice
 		ChargeInterval: 15000
 		Icon: lightningstorm
-		Description: Weather Storm
-		LongDesc: Control the weather to destroy enemy forces.
+		Description: 闪电风暴
+		LongDesc: 控制天气消灭敌军
 		InsufficientPowerSpeechNotification: WeathercontrolDeviceOffline
 		EndChargeSpeechNotification: LightningStormReady
 		SelectTargetSpeechNotification: SelectTarget
@@ -1013,14 +1013,14 @@ gacsph:
 		Queue: Support
 		BuildPaletteOrder: 80
 		Prerequisites: gatech, ~structures.allies, ~techlevel.unrestricted
-		Description: Allows teleporting units in a 3x3 array.
+		Description: 允许在3x3阵列中传送单位
 		BuildLimit: 1
 	IsometricSelectable:
 		Height: 45
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Chronosphere
+		Name: 超时空传送仪
 	Building:
 		Footprint: xxx xxx xxx xxx
 		Dimensions: 4,3
@@ -1043,8 +1043,8 @@ gacsph:
 		OrderName: Chronoshift
 		Icon: chrono
 		ChargeInterval: 7500
-		Description: Chronosphere
-		LongDesc: Teleports a group of units across\nthe map.
+		Description: 超时空传送
+		LongDesc: 在地图上传送一组单位
 		# Those sounds don't work: OpenRA/OpenRA#10540
 		# They also want to be played successive
 		#SelectTargetSound: schrlo1.wav, schrlo2a.wav schrlo2b.wav, schrlo2c.wav, schrlo3.wav
@@ -1070,11 +1070,11 @@ atesla:
 		Queue: Support
 		BuildPaletteOrder: 40
 		Prerequisites: power, radar, ~structures.allies
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs Infantry, Vehicles\n  Weak vs Aircraft
+		Description: 先进基地防御\n需要电量才能运作\n强势对抗：步兵、车辆\n弱势对抗：飞机
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Prism Tower
+		Name: 光棱塔
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
@@ -1116,28 +1116,28 @@ power:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Power Plant
+		Name: 发电厂
 
 refinery:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Ore Refinery
+		Name: 矿石精炼场
 
 barracks:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Infantry Production
+		Name: 兵营
 
 radar:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Radar
+		Name: 雷达
 
 repairpad:
 	AlwaysVisible:
 	Interactable:
 	Tooltip:
-		Name: Service Depot
+		Name: 维修厂

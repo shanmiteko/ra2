@@ -1,0 +1,75 @@
+MapScrollUp: UP
+	Description: 地图上移
+	Types: Viewport, Player, Spectator
+
+MapScrollDown: DOWN
+	Description: 地图下移
+	Types: Viewport, Player, Spectator
+
+MapScrollLeft: LEFT
+	Description: 地图左移
+	Types: Viewport, Player, Spectator
+
+MapScrollRight: RIGHT
+	Description: 地图右移
+	Types: Viewport, Player, Spectator
+
+MapJumpToTopEdge: UP Alt
+	Description: 跳到地图顶端
+	Types: Viewport, Player, Spectator
+
+MapJumpToBottomEdge: DOWN Alt
+	Description: 跳到地图底端
+	Types: Viewport, Player, Spectator
+
+MapJumpToLeftEdge: LEFT Alt
+	Description: 跳到地图左端
+	Types: Viewport, Player, Spectator
+
+MapJumpToRightEdge: RIGHT Alt
+	Description: 跳到地图右端
+	Types: Viewport, Player, Spectator
+
+MapBookmarkSave01: Q Ctrl
+	Description: 保存到地图标签1
+	Types: Viewport, Player, Spectator
+
+MapBookmarkRestore01: Q Alt
+	Description: 跳转到地图标签1
+	Types: Viewport, Player, Spectator
+
+MapBookmarkSave02: W Ctrl
+	Description: 保存到地图标签2
+	Types: Viewport, Player, Spectator
+
+MapBookmarkRestore02: W Alt
+	Description: 跳转到地图标签2
+	Types: Viewport, Player, Spectator
+
+MapBookmarkSave03: E Ctrl
+	Description: 保存到地图标签3
+	Types: Viewport, Player, Spectator
+
+MapBookmarkRestore03: E Alt
+	Description: 跳转到地图标签3
+	Types: Viewport, Player, Spectator
+
+MapBookmarkSave04: R Ctrl
+	Description: 保存到地图标签4
+	Types: Viewport, Player, Spectator
+
+MapBookmarkRestore04: R Alt
+	Description: 跳转到地图标签4
+	Types: Viewport, Player, Spectator
+
+ZoomIn: RIGHTBRACKET
+	Description: 视野放大
+	Types: Viewport, Player, Spectator
+
+ZoomOut: LEFTBRACKET
+	Description: 视野缩小
+	Types: Viewport, Player, Spectator
+
+ResetZoom: PERIOD
+	Description: 重置视野
+	Types: Viewport, Player, Spectator
