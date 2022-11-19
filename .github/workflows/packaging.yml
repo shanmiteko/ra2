@@ -3,8 +3,9 @@ name: Release Packaging
 on:
   push:
     tags:
-      - "dev-*"
       - "release-*"
+      - "playtest-*"
+      - "devtest-*"
 
 jobs:
   assets:
@@ -13,7 +14,7 @@ jobs:
     steps:
       - name: Download Red-Alert-2-Game-Assets.zip
         run: |
-          curl -L https://github.com/shanmiteko/ra2-zh/releases/download/release-20221118/Red-Alert-2-Game-Assets.zip -O
+          curl -L https://github.com/shanmiteko/ra2-zh/releases/download/devtest-20221118/Red-Alert-2-Game-Assets.zip -O
 
       - name: Upload Red-Alert-2-Game-Assets.zip
         uses: svenstaro/upload-release-action@v2
@@ -32,7 +33,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install .NET 6.0
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: "6.0.x"
 
@@ -62,10 +63,10 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install .NET 6.0
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: "6.0.x"
 
@@ -93,40 +94,40 @@ jobs:
           file_glob: true
           file: build/windows/*
 
-  # macos:
-  #   name: macOS Disk Images
-  #   runs-on: macos-11
-  #   steps:
-  #     - name: Clone Repository
-  #       uses: actions/checkout@v2
+  macos:
+    name: macOS Disk Images
+    runs-on: macos-11
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v3
 
-  #     - name: Install .NET 6.0
-  #       uses: actions/setup-dotnet@v1
-  #       with:
-  #         dotnet-version: '6.0.x'
+      - name: Install .NET 6.0
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: "6.0.x"
 
-  #     - name: Prepare Environment
-  #       run: echo "GIT_TAG=${GITHUB_REF#refs/tags/}" >> ${GITHUB_ENV}
+      - name: Prepare Environment
+        run: echo "GIT_TAG=${GITHUB_REF#refs/tags/}" >> ${GITHUB_ENV}
 
-  #     - name: Build
-  #       run: |
-  #         make all
+      - name: Build
+        run: |
+          make all
 
-  #     - name: Package Disk Images
-  #       env:
-  #         MACOS_DEVELOPER_IDENTITY: ${{ secrets.MACOS_DEVELOPER_IDENTITY }}
-  #         MACOS_DEVELOPER_CERTIFICATE_BASE64: ${{ secrets.MACOS_DEVELOPER_CERTIFICATE_BASE64 }}
-  #         MACOS_DEVELOPER_CERTIFICATE_PASSWORD: ${{ secrets.MACOS_DEVELOPER_CERTIFICATE_PASSWORD }}
-  #         MACOS_DEVELOPER_USERNAME: ${{ secrets.MACOS_DEVELOPER_USERNAME }}
-  #         MACOS_DEVELOPER_PASSWORD: ${{ secrets.MACOS_DEVELOPER_PASSWORD }}
-  #       run: |
-  #         mkdir -p build/macos
-  #         ./packaging/macos/buildpackage.sh "${GIT_TAG}" "${PWD}/build/macos"
-  #     - name: Upload Packages
-  #       uses: svenstaro/upload-release-action@v2
-  #       with:
-  #         repo_token: ${{ secrets.GITHUB_TOKEN }}
-  #         tag: ${{ github.ref }}
-  #         overwrite: true
-  #         file_glob: true
-  #         file: build/macos/*
+      - name: Package Disk Images
+        env:
+          MACOS_DEVELOPER_IDENTITY: ${{ secrets.MACOS_DEVELOPER_IDENTITY }}
+          MACOS_DEVELOPER_CERTIFICATE_BASE64: ${{ secrets.MACOS_DEVELOPER_CERTIFICATE_BASE64 }}
+          MACOS_DEVELOPER_CERTIFICATE_PASSWORD: ${{ secrets.MACOS_DEVELOPER_CERTIFICATE_PASSWORD }}
+          MACOS_DEVELOPER_USERNAME: ${{ secrets.MACOS_DEVELOPER_USERNAME }}
+          MACOS_DEVELOPER_PASSWORD: ${{ secrets.MACOS_DEVELOPER_PASSWORD }}
+        run: |
+          mkdir -p build/macos
+          ./packaging/macos/buildpackage.sh "${GIT_TAG}" "${PWD}/build/macos"
+      - name: Upload Packages
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          overwrite: true
+          file_glob: true
+          file: build/macos/*
