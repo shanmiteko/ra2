@@ -39,6 +39,10 @@ civbfm:
 	Inherits: ^CivilianInfantry
 	Tooltip:
 		Name: 海滩胖男
+	-WithInfantryBody:
+	WithInfantryBody:
+		IdleSequences: idle1
+		StandSequences: stand
 
 civbf:
 	Inherits: ^CivilianInfantry
